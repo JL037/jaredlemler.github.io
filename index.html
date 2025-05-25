@@ -44,19 +44,30 @@
     }
 
     .sidebar h1 {
-      font-size: 1.5rem;
-      color: #58a6ff;
+      font-size: 1.75rem;
+      color: #f778ba;
       margin-bottom: 10px;
     }
 
-    .sidebar .links {
-      margin-top: 20px;
+    .sidebar p {
+      font-size: 0.95rem;
+      color: #8b949e;
+      line-height: 1.4;
+      margin-bottom: 20px;
     }
 
     .sidebar .links a {
-      display: block;
-      margin: 8px 0;
+      display: inline-block;
+      color: #58a6ff;
+      margin: 6px 0;
+      font-weight: bold;
+      transition: color 0.2s ease;
     }
+
+    .sidebar .links a:hover {
+      color: #f778ba;
+    }
+
 
     .main {
       flex-grow: 1;
@@ -90,6 +101,24 @@
     .project h4 {
       margin: 0;
     }
+    .section ul {
+      list-style-type: square;
+      padding-left: 20px;
+      margin-top: 10px;
+    }
+
+    .section ul li {
+      margin-bottom: 10px;
+    }
+
+    .section ul li a {
+      color: #58a6ff;
+      text-decoration: none;
+    }
+
+    .section ul li a:hover {
+      color: #f778ba;
+    }
   </style>
 </head>
 
@@ -97,14 +126,25 @@
   <div class="container">
     <!-- Sidebar with image and links -->
     <div class="sidebar">
-      <img src="jared.PNG" alt="Jared Lemler" />
-      <h1>Jared Lemler</h1>
-      <p>Backend Developer</p>
-      <div class="links">
-        <a href="https://github.com/JL037" target="_blank">GitHub</a>
-        <a href="https://linkedin.com/in/jaredlemler" target="_blank">LinkedIn</a>
-        <a href="mailto:jared@jaredlemler.com">Email Me</a>
-      </div>
+  <img src="jared.PNG" alt="Jared Lemler" />
+  
+  <h1 style="font-size: 1.75rem; color: #f778ba; margin-bottom: 10px;">
+  From Electrician to Engineer
+  </h1>
+
+  <p>Solving real-world problems — now with code.</p>
+
+  <p style="font-style: italic; color: #58a6ff;">
+    I build APIs, automate chaos, and stay curious.
+  </p>
+
+  <div class="links">
+    <a href="https://github.com/JL037" target="_blank">GitHub</a>
+    <a href="https://linkedin.com/in/jaredlemler" target="_blank">LinkedIn</a>
+    <a href="mailto:jared@jaredlemler.com">Email Me</a>
+  </div>
+</div>
+
     </div>
 
     <!-- Main content -->
@@ -134,13 +174,34 @@
         </div>
 
         <div class="project">
-          <h4> Travel Wishlist API</h4>
-          <p>
-            REST API for saving and filtering destinations. Built with FastAPI, Alembic, Pytest, and SQLAlchemy.
-            <br />
-            <a href="https://github.com/JL037/travel-wishlist" target="_blank">View on GitHub</a>
-          </p>
+          <h4>Travel Wishlist API</h4>
+          <p>REST API for saving and filtering destinations. Built with FastAPI, Alembic, Pytest, and SQLAlchemy.</p>
+          <br />
+          <a href="https://github.com/JL037/travel_wishlist" target="_blank">View on GitHub</a>
         </div>
+
+        <!-- ✅ Add this blog section here -->
+        <div class="section">
+          <h3>Blog: My Journey Into Dev 🔥</h3>
+          <p style="font-style: italic; color: #bbb;">
+            These are raw posts I wrote when I was just starting out — full of struggles, wins, and the mindset shift that pushed me from tradesman to dev.
+          </p>
+          <p style="font-size: 0.85rem; color: #888;">
+            These aren’t technical deep dives — they’re the thoughts and reflections I had while learning to code for the first time. If you’re just starting, I hope they make you feel a little less alone.
+          </p>
+           <ul>
+            <li>
+              <a href="https://medium.com/@jaredtlemler/struggling-but-learning-0996b81958dc" target="_blank">
+                Finding My Path: Struggling, Doubting, But Showing Up
+              </a>
+            </li>
+          <li>
+            <a href="https://medium.com/@jaredtlemler/what-two-months-of-mentorship-taught-me-as-a-new-developer-7de802bf7119" target="_blank">
+              Two Months of Mentorship: The Shift From Electrician to Engineer
+            </a>
+          </li>
+        </ul>
+      </div>
       </div>
     </div>
   </div>
