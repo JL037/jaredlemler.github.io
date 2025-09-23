@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Jared Lemler</title>
+    <link>https://jaredlemler.com/</link>
+    <description>From electrician to engineer — my journey and builds.</description>
+    <lastBuildDate>Mon, 22 Sep 2025 18:00:00 GMT</lastBuildDate>
+
+    <!-- Post item -->
+    <item>
+      <title>The Value of In-Person Events</title>
+      <link>https://jaredlemler.com/blog/in-person-events/</link>
+      <guid isPermaLink="true">https://jaredlemler.com/blog/in-person-events/</guid>
+      <pubDate>Mon, 22 Sep 2025 18:00:00 GMT</pubDate>
+      <description><![CDATA[
+        Attending CascadiaJS changed my perspective on the value of in-person vs. virtual events…
+      ]]></description>
+    </item>
+
+  </channel>
+</rss>
+
