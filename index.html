@@ -2,223 +2,397 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Jared Lemler | Backend Developer</title>
-  <meta name="description" content="From electrician to developer - building full-stack applications with Python, FastAPI, PostgreSQL, TypeScript, and React. Projects, writing and ways to get in touch."/>
-  
-  <link rel="canonical" href="https://jaredlemler.com/" />
-
-  <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="Jared Lemler" />
-  <meta property="og:title" content="Jared Lemler | Backend Developer" />
-  <meta property="og:description" content="From electrician to developer - building full-stack applications with Python, FastAPI, PostgreSQL, TypeScript, and React. Projects, writing and ways to get in touch." />
-  <meta property="og:url" content="https://jaredlemler.com/" />
-  <meta property="og:image" content="https://jaredlemler.com/og/home.png" />
-  <meta name="twitter:card" content="summary_large_image" />
-
-  <link rel="alternate" type="application/rss+xml" title="Jared's Blog" href="/feed.xml" />
-
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Courier New', Courier, monospace;
-      background-color: #505152;
-      color: #c9d1d9;
-    }
-
-    a {
-      color: #58a6ff;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    .container {
-      display: flex;
-      max-width: 1200px;
-      margin: auto;
-    }
-
-    .sidebar {
-      width: 280px;
-      padding: 40px 20px;
-      background-color: #0d1117;
-      color: #c9d1d9;
-      text-align: center;
-    }
-
-    .sidebar img {
-      width: 160px;
-      height: 160px;
-      object-fit: cover;
-      border-radius: 50%;
-      margin-bottom: 20px;
-      box-shadow: 0 0 8px rgba(88, 166, 255, 0.5);
-    }
-
-    .sidebar h1 {
-      font-size: 1.75rem;
-      color: #7ee787;
-      margin-bottom: 10px;
-    }
-
-    .sidebar p {
-      font-size: 0.95rem;
-      color: #8b949e;
-      line-height: 1.4;
-      margin-bottom: 20px;
-    }
-
-    .sidebar .links a {
-      display: inline-block;
-      color: #58a6ff;
-      margin: 6px 0;
-      font-weight: bold;
-      transition: color 0.2s ease;
-    }
-
-    .sidebar .links a:hover {
-      color: #7ee787;
-    }
-
-    .main {
-      flex-grow: 1;
-      padding: 40px;
-    }
-
-    .intro {
-      margin-bottom: 40px;
-    }
-
-    .intro h2 {
-      color: #58a6ff;
-      font-size: 1.75rem;
-      margin-bottom: 10px;
-    }
-
-    .section {
-      margin-bottom: 40px;
-    }
-
-    .section h3 {
-      color: #58a6ff;
-      font-size: 1.25rem;
-      margin-bottom: 10px;
-    }
-
-    .project {
-      margin-bottom: 20px;
-    }
-
-    .project h4 {
-      margin: 0;
-    }
-
-    .section ul {
-      list-style-type: square;
-      padding-left: 20px;
-      margin-top: 10px;
-    }
-
-    .section ul li {
-      margin-bottom: 10px;
-    }
-
-    .section ul li a {
-      color: #58a6ff;
-      text-decoration: none;
-    }
-
-    .section ul li a:hover {
-      color: #7ee787;
-    }
-
-    @media (max-width: 768px) {
-      .container {
-        flex-direction: column;
-      }
-      .sidebar, .main {
-        width: 100%;
-        padding: 20px;
-      }
-    }
-  </style>
+  <title>Jared Lemler – Backend Engineer & Builder</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    name="description"
+    content="From electrician to backend engineer. I build practical systems with Python, FastAPI, and Postgres to solve real problems for people and animals."
+  />
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-  <div class="container">
-    <div class="sidebar">
-      <img src="jared.png" alt="Jared Lemler" />
-      <h1>From Electrician to Engineer</h1>
-      <p>Solving real-world problems —<br />now with code.</p>
-      <p style="font-style: italic; color: #58a6ff;">
-        Always curious.
-      </p>
-      <div class="links">
-        <a href="https://github.com/JL037" target="_blank" rel="noopener">GitHub</a>
-        <a href="https://linkedin.com/in/jaredlemler" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="https://x.com/JaredLemler" target="_blank">X</a>
-        <a href="https://bsky.app/profile/jaredlemler.bsky.social" target="_blank">Bluesky</a>
-        <a href="mailto:jared@jaredlemler.com">Email Me</a>
-        <a href="/blog/">Blog</a>
+<body class="bg-slate-950 text-slate-100 antialiased">
+  <!-- Page Wrapper -->
+  <div class="min-h-screen flex flex-col">
+    <!-- Navigation -->
+    <header class="border-b border-slate-800/80 bg-slate-950/80 backdrop-blur sticky top-0 z-20">
+      <div class="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between">
+        <a href="#top" class="font-semibold tracking-tight text-slate-100">
+          jared<span class="text-emerald-400">.dev</span>
+        </a>
+        <nav class="hidden sm:flex gap-6 text-sm text-slate-300">
+          <a href="#about" class="hover:text-emerald-400 transition">About</a>
+          <a href="#skills" class="hover:text-emerald-400 transition">Skills</a>
+          <a href="#projects" class="hover:text-emerald-400 transition">Projects</a>
+          <a href="#writing" class="hover:text-emerald-400 transition">Writing</a>
+          <a href="#contact" class="hover:text-emerald-400 transition">Contact</a>
+        </nav>
       </div>
-    </div>
+    </header>
 
-    <div class="main">
-      <div class="intro">
-        <h2>About Me</h2>
-        <p>I started my career as an electrician, solving real-world problems under pressure and working with complex systems in the field. Eventually, I had to learn how to read PLC diagrams, and I found it fascinating — the idea that a program, combined with the right wiring, could control something so intricate. That’s what sparked my deep interest in software development — the logic, the automation, the ability to build things that scale.</p>
-        <p>Since then, I’ve been teaching myself backend development with a strong focus on clean, testable code and real-world APIs. I’ve built and deployed projects using FastAPI, Django, Docker, PostgreSQL, JWT authentication, and CI/CD pipelines. Every line of code I write is part of my journey from tradesman to engineer — and I bring the same work ethic, resourcefulness, and grit to every repo.</p>
-        <p>I’m constantly expanding my skills — digging into testing, system design, and trying to solve real world problems. I genuinely love learning new things, whether it’s exploring a new framework, understanding how infrastructure fits together, or just getting better at writing clean, maintainable code. Building software is something I truly enjoy, and I’m excited to keep growing, shipping, and challenging myself every day.</p>
-      </div>
+    <main id="top" class="flex-1">
+      <!-- Hero -->
+      <section class="border-b border-slate-800/80 bg-gradient-to-b from-slate-950 to-slate-900">
+        <div class="max-w-5xl mx-auto px-4 py-16 md:py-20 grid md:grid-cols-[3fr,2fr] gap-10 items-center">
+          <div>
+            <p class="text-xs font-mono uppercase tracking-[0.2em] text-emerald-400/80 mb-3">
+              Backend engineer · Builder
+            </p>
+            <h1 class="text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight text-slate-50 mb-4">
+              From wiring buildings to wiring systems.
+            </h1>
+            <p class="text-base md:text-lg text-slate-300 mb-6">
+              I’m <span class="font-medium text-slate-100">Jared Lemler</span>, a backend engineer and former
+              electrician. I build practical systems with
+              <span class="font-medium text-emerald-300">Python, FastAPI, Postgres, and Docker</span>
+              — focused on real-world problems, especially for animals and the people who care for them.
+            </p>
+            <p class="text-sm text-slate-400 mb-8">
+              Calm under pressure, obsessed with craftsmanship, and always looking for clearer, more honest systems.
+            </p>
+            <div class="flex flex-wrap gap-3">
+              <a
+                href="#projects"
+                class="inline-flex items-center rounded-full bg-emerald-500 hover:bg-emerald-400 text-slate-950 text-sm font-medium px-4 py-2 transition"
+              >
+                View projects
+              </a>
+              <a
+                href="#about"
+                class="inline-flex items-center rounded-full border border-slate-700 hover:border-emerald-400 text-sm px-4 py-2 text-slate-200 transition"
+              >
+                Read my story
+              </a>
+            </div>
+          </div>
 
-      <div class="section">
-        <h3>Projects</h3>
-
-        <div class="project">
-          <h4>PawNode – Pet Health Tracker(In Development)</h4>
-          <p>Micro-SaaS for managing pet health records and sharing access. Built with FastAPI, Docker, PostgreSQL, JWT Auth.<br /></p>
+          <!-- Side card -->
+          <div class="md:flex md:justify-end">
+            <div class="w-full max-w-sm rounded-2xl border border-slate-800 bg-slate-900/60 p-5 shadow-lg shadow-black/40">
+              <p class="text-xs font-mono uppercase tracking-[0.2em] text-slate-400 mb-3">
+                At a glance
+              </p>
+              <ul class="space-y-3 text-sm text-slate-200">
+                <li class="flex items-start gap-2">
+                  <span class="mt-1 h-1.5 w-1.5 rounded-full bg-emerald-400"></span>
+                  <div>
+                    <p class="font-medium">Backend-first</p>
+                    <p class="text-slate-400">
+                      FastAPI, Fastify, SQL, Postgres, system design, and testability.
+                    </p>
+                  </div>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="mt-1 h-1.5 w-1.5 rounded-full bg-emerald-400"></span>
+                  <div>
+                    <p class="font-medium">From trades to tech</p>
+                    <p class="text-slate-400">
+                      Years wiring real infrastructure before wiring backend systems.
+                    </p>
+                  </div>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="mt-1 h-1.5 w-1.5 rounded-full bg-emerald-400"></span>
+                  <div>
+                    <p class="font-medium">Building in public</p>
+                    <p class="text-slate-400">
+                      Learning openly, sharing the process on VoxPort, ATProto, and micro-SaaS experiments.
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
+      </section>
 
-        <div class="project">
-          <h4>Travel Wishlist App</h4>
-          <p>A backend service for organizing travel plans and tracking places you’ve visited or want to explore. Built with FastAPI, PostgreSQL, and React.</p>
-          <br />
-          <a href="https://www.travelwishlist.app/tour/profile" target="_blank" rel="noopener">Travel Wishlist</a>
+      <!-- About -->
+      <section id="about" class="border-b border-slate-800/80 bg-slate-950">
+        <div class="max-w-5xl mx-auto px-4 py-12 md:py-16 grid md:grid-cols-[3fr,2fr] gap-10">
+          <div>
+            <h2 class="text-xl md:text-2xl font-semibold text-slate-50 mb-4">
+              From electrician to backend engineer.
+            </h2>
+            <p class="text-sm md:text-base text-slate-300 mb-4">
+              I started my career in construction and electrical work — coordinating with teams, reading plans,
+              and wiring systems that had to be safe, reliable, and maintainable. That work taught me
+              <span class="font-medium text-slate-100">craftsmanship, patience, and how to stay calm under pressure</span>.
+            </p>
+            <p class="text-sm md:text-base text-slate-300 mb-4">
+              Over time I got hooked on the logic behind automation and control systems. Eventually that pulled me
+              into software. Now I use the same mindset to design APIs, databases, and services that solve real-life
+              problems for people and animals — instead of just chasing hype.
+            </p>
+            <p class="text-sm md:text-base text-slate-300">
+              I care about <span class="font-medium text-slate-100">honesty, ownership, and better systems</span>.
+              That shows up in the tools I use (Python, FastAPI, Postgres, ATProto), the projects I build,
+              and the way I learn: in public, without pretending to have it all figured out.
+            </p>
+          </div>
+          <div class="space-y-4 text-sm text-slate-200">
+            <div class="rounded-2xl border border-slate-800 bg-slate-900/60 p-4">
+              <h3 class="text-xs font-mono uppercase tracking-[0.2em] text-emerald-400 mb-2">Brand pillars</h3>
+              <ul class="space-y-1.5 text-slate-300">
+                <li><span class="font-medium text-slate-100">Craftsmanship:</span> do it right, not just fast.</li>
+                <li><span class="font-medium text-slate-100">Purpose:</span> build things that make life better.</li>
+                <li><span class="font-medium text-slate-100">Calm clarity:</span> break problems into clear steps.</li>
+                <li><span class="font-medium text-slate-100">Independence:</span> prefer open, user-owned systems.</li>
+              </ul>
+            </div>
+            <div class="rounded-2xl border border-slate-800 bg-slate-900/60 p-4">
+              <h3 class="text-xs font-mono uppercase tracking-[0.2em] text-emerald-400 mb-2">Outside of code</h3>
+              <p class="text-slate-300">
+                I live in California with my wife and our dogs. Outside of work you’ll usually find me gaming,
+                reading docs I don’t strictly need yet, or thinking about how to give animals a better life.
+              </p>
+            </div>
+          </div>
         </div>
-      </div>
+      </section>
 
-      <div class="section">
-        <h3>Blog: My Journey Into Dev </h3>
-        <p style="font-style: italic; color: #bbb;">
-          These are raw posts I wrote when I was just starting out — full of struggles, wins, and the mindset shift that pushed me from tradesman to dev.
-        </p>
-        <p style="font-size: 0.85rem; color: #888;">
-          These aren’t technical deep dives — they’re the thoughts and reflections I had while learning to code for the first time. If you’re just starting, I hope they make you feel a little less alone.
-        </p>
-        <ul>
-          <li>
-            <a href="https://jaredlemler.hashnode.dev" class="btn btn-primary" target="_blank" rel="noopener">
-              Read My Blog on Hashnode
+      <!-- Skills -->
+      <section id="skills" class="border-b border-slate-800/80 bg-slate-950">
+        <div class="max-w-5xl mx-auto px-4 py-12 md:py-16">
+          <h2 class="text-xl md:text-2xl font-semibold text-slate-50 mb-6">
+            What I’m good at.
+          </h2>
+          <div class="grid md:grid-cols-3 gap-6 text-sm">
+            <div class="rounded-2xl border border-slate-800 bg-slate-900/60 p-5">
+              <h3 class="text-xs font-mono uppercase tracking-[0.2em] text-emerald-400 mb-3">
+                Backend & data
+              </h3>
+              <ul class="space-y-1.5 text-slate-300">
+                <li>Python, FastAPI, Django</li>
+                <li>TypeScript, Fastify</li>
+                <li>PostgreSQL, SQLAlchemy</li>
+                <li>API design & auth (JWT)</li>
+                <li>Background jobs & ETL</li>
+              </ul>
+            </div>
+            <div class="rounded-2xl border border-slate-800 bg-slate-900/60 p-5">
+              <h3 class="text-xs font-mono uppercase tracking-[0.2em] text-emerald-400 mb-3">
+                Systems & delivery
+              </h3>
+              <ul class="space-y-1.5 text-slate-300">
+                <li>Docker & docker-compose</li>
+                <li>Env & config management</li>
+                <li>Testing with pytest / Vitest</li>
+                <li>CI/CD, basic observability</li>
+                <li>ATProto / decentralized apps</li>
+              </ul>
+            </div>
+            <div class="rounded-2xl border border-slate-800 bg-slate-900/60 p-5">
+              <h3 class="text-xs font-mono uppercase tracking-[0.2em] text-emerald-400 mb-3">
+                How I work
+              </h3>
+              <ul class="space-y-1.5 text-slate-300">
+                <li>Breaks work into clear steps</li>
+                <li>Calm, honest communication</li>
+                <li>Strong bias toward learning</li>
+                <li>Care for animals & people</li>
+                <li>Open to pairing and feedback</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects -->
+      <section id="projects" class="border-b border-slate-800/80 bg-slate-950">
+        <div class="max-w-5xl mx-auto px-4 py-12 md:py-16">
+          <h2 class="text-xl md:text-2xl font-semibold text-slate-50 mb-2">
+            Projects that represent how I think.
+          </h2>
+          <p class="text-sm text-slate-400 mb-8">
+            Not toy apps — real problems, real constraints, and systems I care about.
+          </p>
+
+          <div class="space-y-6">
+            <!-- PawNode -->
+            <article class="rounded-2xl border border-slate-800 bg-slate-900/60 p-5">
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+                <h3 class="text-base md:text-lg font-semibold text-slate-50">
+                  PawNode – Pet Health Tracker (Micro-SaaS)
+                </h3>
+                <span class="text-[11px] font-mono uppercase tracking-[0.2em] text-emerald-400">
+                  FastAPI · Postgres · Docker · Auth
+                </span>
+              </div>
+              <p class="text-sm text-slate-300 mb-3">
+                Backend for a pet health tracker that lets owners manage animals, appointments, vet visits, and
+                medications in a structured way. Built as a real micro-SaaS foundation with JWT auth,
+                relational data models, and room for mobile apps later.
+              </p>
+              <p class="text-xs text-slate-400 mb-3">
+                Why it matters: animals can’t advocate for themselves. Good records, reminders, and shared access
+                make their lives — and their owners’ decisions — easier.
+              </p>
+              <div class="flex flex-wrap gap-2 text-[11px] text-slate-300">
+                <span class="rounded-full border border-slate-700 px-2 py-0.5">FastAPI</span>
+                <span class="rounded-full border border-slate-700 px-2 py-0.5">PostgreSQL</span>
+                <span class="rounded-full border border-slate-700 px-2 py-0.5">Docker</span>
+                <span class="rounded-full border border-slate-700 px-2 py-0.5">JWT Auth</span>
+              </div>
+            </article>
+
+            <!-- Travel Wishlist -->
+            <article class="rounded-2xl border border-slate-800 bg-slate-900/60 p-5">
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+                <h3 class="text-base md:text-lg font-semibold text-slate-50">
+                  Travel Wishlist – Full-stack Travel Planner
+                </h3>
+                <span class="text-[11px] font-mono uppercase tracking-[0.2em] text-emerald-400">
+                  FastAPI · React · Maps · Analytics
+                </span>
+              </div>
+              <p class="text-sm text-slate-300 mb-3">
+                A real deployed app for saving, organizing, and analyzing travel. Combines a FastAPI/Postgres backend
+                with a React frontend, including map views and basic analytics around visits and plans.
+              </p>
+              <p class="text-xs text-slate-400 mb-3">
+                Why it matters: it’s a complete loop — database design, APIs, frontend integration, deployment,
+                and iteration based on actual usage.
+              </p>
+              <div class="flex flex-wrap gap-2 text-[11px] text-slate-300">
+                <span class="rounded-full border border-slate-700 px-2 py-0.5">FastAPI</span>
+                <span class="rounded-full border border-slate-700 px-2 py-0.5">PostgreSQL</span>
+                <span class="rounded-full border border-slate-700 px-2 py-0.5">React</span>
+                <span class="rounded-full border border-slate-700 px-2 py-0.5">Deployable</span>
+              </div>
+            </article>
+
+            <!-- VoxPort / ATProto work -->
+            <article class="rounded-2xl border border-slate-800 bg-slate-900/60 p-5">
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+                <h3 class="text-base md:text-lg font-semibold text-slate-50">
+                  VoxPort – Creator tools on the AT Protocol (Early Work)
+                </h3>
+                <span class="text-[11px] font-mono uppercase tracking-[0.2em] text-emerald-400">
+                  Fastify · Next.js · ATProto
+                </span>
+              </div>
+              <p class="text-sm text-slate-300 mb-3">
+                Exploring decentralized creator tools where podcasters own their identity, feed, and audience.
+                Working with the AT Protocol, custom lexicons, and a Fastify/Next.js stack to keep creator data
+                portable and under their control.
+              </p>
+              <p class="text-xs text-slate-400 mb-3">
+                Why it matters: I care about ownership and systems that don’t trap people. This project pushes me to
+                think beyond a single app and into protocols and ecosystems.
+              </p>
+              <div class="flex flex-wrap gap-2 text-[11px] text-slate-300">
+                <span class="rounded-full border border-slate-700 px-2 py-0.5">Fastify</span>
+                <span class="rounded-full border border-slate-700 px-2 py-0.5">Next.js</span>
+                <span class="rounded-full border border-slate-700 px-2 py-0.5">ATProto</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Writing -->
+      <section id="writing" class="border-b border-slate-800/80 bg-slate-950">
+        <div class="max-w-5xl mx-auto px-4 py-12 md:py-16">
+          <h2 class="text-xl md:text-2xl font-semibold text-slate-50 mb-2">
+            Learning in public.
+          </h2>
+          <p class="text-sm text-slate-400 mb-6">
+            I write to document the journey — from the trades to backend development, Docker headaches, and
+            what I’m learning about building systems that last.
+          </p>
+
+          <div class="space-y-3 text-sm">
+            <a
+              href="https://medium.com/@jaredtlemler"
+              target="_blank"
+              rel="noreferrer"
+              class="block rounded-2xl border border-slate-800 bg-slate-900/60 px-4 py-3 hover:border-emerald-400 transition"
+            >
+              <p class="font-medium text-slate-100">
+                From Electrical Work to Software Development: Embracing Public Learning
+              </p>
+              <p class="text-xs text-slate-400 mt-1">
+                Why I stopped hiding the messy part of learning and started sharing the process instead.
+              </p>
             </a>
-          </li>
-          <li>
-            <a href="https://medium.com/@jaredtlemler/struggling-but-learning-0996b81958dc" target="_blank" rel="noopener">
-              Finding My Path: Struggling, Doubting, But Showing Up
+            <a
+              href="https://medium.com/@jaredtlemler"
+              target="_blank"
+              rel="noreferrer"
+              class="block rounded-2xl border border-slate-800 bg-slate-900/60 px-4 py-3 hover:border-emerald-400 transition"
+            >
+              <p class="font-medium text-slate-100">
+                My Docker Learning Journey: Struggles, Headaches, and Small Wins
+              </p>
+              <p class="text-xs text-slate-400 mt-1">
+                A straightforward look at what actually tripped me up with Docker and how I worked through it.
+              </p>
             </a>
-          </li>
-          <li>
-            <a href="https://medium.com/@jaredtlemler/what-two-months-of-mentorship-taught-me-as-a-new-developer-7de802bf7119" target="_blank" rel="noopener">
-              Two Months of Mentorship: The Shift From Electrician to Engineer
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact" class="bg-slate-950">
+        <div class="max-w-5xl mx-auto px-4 py-12 md:py-16">
+          <h2 class="text-xl md:text-2xl font-semibold text-slate-50 mb-2">
+            Let’s build something useful.
+          </h2>
+          <p class="text-sm text-slate-400 mb-6">
+            I’m open to backend roles, collaborations, and projects that make life better for people or animals —
+            or push decentralized, user-owned tech forward.
+          </p>
+
+          <div class="flex flex-wrap gap-3 text-sm">
+            <a
+              href="mailto:jared@jaredlemler.com"
+              class="inline-flex items-center rounded-full bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-medium px-4 py-2 transition"
+            >
+              Email me
             </a>
-          </li>
-        </ul>
+            <a
+              href="https://github.com/JL037"
+              target="_blank"
+              rel="noreferrer"
+              class="inline-flex items-center rounded-full border border-slate-700 hover:border-emerald-400 px-4 py-2 text-slate-200 transition"
+            >
+              GitHub
+            </a>
+            <a
+              href="https://bsky.app/profile/voxport.bsky.social"
+              target="_blank"
+              rel="noreferrer"
+              class="inline-flex items-center rounded-full border border-slate-700 hover:border-emerald-400 px-4 py-2 text-slate-200 transition"
+            >
+              Bluesky
+            </a>
+            <a
+              href="https://www.linkedin.com/in/jaredlemler"
+              target="_blank"
+              rel="noreferrer"
+              class="inline-flex items-center rounded-full border border-slate-700 hover:border-emerald-400 px-4 py-2 text-slate-200 transition"
+            >
+              LinkedIn
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-800 bg-slate-950">
+      <div class="max-w-5xl mx-auto px-4 py-4 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-slate-500">
+        <p>© <span id="year"></span> Jared Lemler. Built with care.</p>
+        <p>From electrician to backend engineer — still learning in public.</p>
       </div>
-    </div>
+    </footer>
   </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
+
 
 
 
