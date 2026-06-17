@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Resume – Jared Lemler</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Resume for Jared Lemler – Backend Engineer & Builder." />
+
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="canonical" href="https://jaredlemler.com/resume/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Jared Lemler" />
+  <meta property="og:title" content="Jared Lemler – Resume" />
+  <meta property="og:description" content="Backend Engineer with a craftsman's approach. 8 years in electrical systems, now building software that is safe, reliable, and maintainable." />
+  <meta property="og:url" content="https://jaredlemler.com/resume/" />
+  <meta property="og:image" content="https://jaredlemler.com/og/home.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    @media print {
+      body { background: #fff !important; color: #000 !important; }
+      header, .no-print { display: none !important; }
+      section { break-inside: avoid; }
+      .print\:bg-white { background: #fff !important; }
+      .print\:text-black { color: #000 !important; }
+    }
+  </style>
+</head>
+<body class="bg-slate-950 text-slate-100 antialiased">
+  <div class="min-h-screen flex flex-col">
+    <header class="border-b border-slate-800/80 bg-slate-950/80 backdrop-blur sticky top-0 z-20">
+      <div class="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between">
+        <a href="/" class="font-semibold tracking-tight text-slate-100">
+          jared<span class="text-emerald-400">.dev</span>
+        </a>
+        <nav class="hidden sm:flex gap-6 text-sm text-slate-300">
+          <a href="/#about" class="hover:text-emerald-400 transition">About</a>
+          <a href="/#projects" class="hover:text-emerald-400 transition">Projects</a>
+          <a href="/#writing" class="hover:text-emerald-400 transition">Writing</a>
+          <a href="/#contact" class="hover:text-emerald-400 transition">Contact</a>
+          <a href="/blog/" class="hover:text-emerald-400 transition">Blog</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="flex-1">
+      <section class="border-b border-slate-800/80 bg-gradient-to-b from-slate-950 to-slate-900">
+        <div class="max-w-5xl mx-auto px-4 py-12 md:py-16">
+          <div class="flex flex-wrap items-center justify-between gap-4 mb-6">
+            <div>
+              <p class="text-xs font-mono uppercase tracking-[0.2em] text-emerald-400/80 mb-2">Resume</p>
+              <h1 class="text-3xl md:text-4xl font-semibold tracking-tight text-slate-50">Jared Lemler</h1>
+              <p class="text-slate-300 mt-1">Backend Engineer · Pacifica, CA</p>
+            </div>
+            <div class="flex gap-3 no-print">
+              <a
+                href="/resume.pdf"
+                class="inline-flex items-center rounded-full bg-emerald-500 hover:bg-emerald-400 text-slate-950 text-sm font-medium px-4 py-2 transition"
+              >
+                Download PDF
+              </a>
+              <button
+                onclick="window.print()"
+                class="inline-flex items-center rounded-full border border-slate-700 hover:border-emerald-400 text-sm px-4 py-2 text-slate-200 transition"
+              >
+                Print
+              </button>
+            </div>
+          </div>
+
+          <div class="flex flex-wrap gap-x-6 gap-y-1 text-sm text-slate-400">
+            <a href="https://jaredlemler.com" class="hover:text-emerald-400 transition">jaredlemler.com</a>
+            <span class="text-slate-600">|</span>
+            <a href="https://github.com/JL037" class="hover:text-emerald-400 transition">github.com/JL037</a>
+            <span class="text-slate-600">|</span>
+            <a href="https://www.linkedin.com/in/jaredlemler" class="hover:text-emerald-400 transition">linkedin.com/in/jaredlemler</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="border-b border-slate-800/80 bg-slate-950">
+        <div class="max-w-5xl mx-auto px-4 py-12 md:py-16">
+          <h2 class="text-xs font-mono uppercase tracking-[0.2em] text-emerald-400 mb-4">Professional Summary</h2>
+          <div class="rounded-2xl border border-slate-800 bg-slate-900/60 p-5">
+            <p class="text-sm md:text-base text-slate-300 leading-relaxed">
+              Backend Engineer with a craftsman's approach — 8 years in electrical systems, now building software that is safe, reliable, and maintainable. My electrician background honed my systems thinking: coordinating teams, reading complex plans, and building infrastructure that can't fail. I bring the same patience and troubleshooting discipline from wiring buildings to designing APIs, databases, and containerized services.
+            </p>
+            <p class="text-sm md:text-base text-slate-300 leading-relaxed mt-3">
+              Technically grounded in Python/FastAPI and TypeScript/Fastify, with production experience in PostgreSQL, Prisma, Docker. Recently architected <span class="text-emerald-300 font-medium">VoxPort</span>, a federated podcast platform on the AT Protocol, building high-throughput data pipelines (1,000 event queues, 100-event batching, 95% I/O reduction) under real-world constraints. I work with honest communication, clear ownership, and passion for contributing to teams.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="border-b border-slate-800/80 bg-slate-950">
+        <div class="max-w-5xl mx-auto px-4 py-12 md:py-16">
+          <h2 class="text-xs font-mono uppercase tracking-[0.2em] text-emerald-400 mb-6">Projects</h2>
+          <div class="space-y-6">
+            <article class="rounded-2xl border border-slate-800 bg-slate-900/60 p-5">
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+                <h3 class="text-base md:text-lg font-semibold text-slate-50">
+                  VoxPort
+                  <a href="https://voxport.live" target="_blank" rel="noreferrer" class="text-emerald-400 hover:text-emerald-300 text-sm font-normal ml-1">voxport.live &rarr;</a>
+                </h3>
+                <span class="text-[11px] font-mono uppercase tracking-[0.2em] text-emerald-400">
+                  Fastify · Next.js · ATProto
+                </span>
+              </div>
+              <p class="text-sm text-slate-300 mb-4">Podcast Platform built on the AT Protocol</p>
+              <ul class="space-y-2 text-sm text-slate-300">
+                <li class="flex items-start gap-2">
+                  <span class="mt-1.5 h-1.5 w-1.5 rounded-full bg-emerald-400 shrink-0"></span>
+                  <span><span class="font-medium text-slate-100">Zero-Downtime AT Protocol Federation:</span> Built resilient WebSocket consumer surviving 10+ reconnection cycles with bounded memory backpressure (1,000 event cap), processing 7+ collections with 100-event batching. Achieved ~95% I/O reduction vs. naive per-event persistence.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="mt-1.5 h-1.5 w-1.5 rounded-full bg-emerald-400 shrink-0"></span>
+                  <span><span class="font-medium text-slate-100">Engagement Analytics Engine:</span> Built hourly velocity aggregation system tracking engagement across 1h to 168h (7-day) windows using a weighted scoring algorithm (follows=10x, likes=1x, mentions=5x) for real-time trending detection via hourly scheduled jobs.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="mt-1.5 h-1.5 w-1.5 rounded-full bg-emerald-400 shrink-0"></span>
+                  <span><span class="font-medium text-slate-100">Memory Optimized Cursor Tracking:</span> Eliminated per-event DB writes via in-memory cursor with 5-second flush intervals, reducing database round trips by ~95% during high-volume ingestion.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="mt-1.5 h-1.5 w-1.5 rounded-full bg-emerald-400 shrink-0"></span>
+                  <span><span class="font-medium text-slate-100">Relational Data Architecture:</span> Designed 15+ entity normalized schema with time-series aggregation tables for historical trend analysis.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="mt-1.5 h-1.5 w-1.5 rounded-full bg-emerald-400 shrink-0"></span>
+                  <span><span class="font-medium text-slate-100">Scalable Media Infrastructure:</span> Integrated Cloudflare R2 for content-addressed blob storage, mapping CIDs to AT Protocol records for verifiable media distribution across federated nodes.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="mt-1.5 h-1.5 w-1.5 rounded-full bg-emerald-400 shrink-0"></span>
+                  <span><span class="font-medium text-slate-100">Backfill Migration System:</span> Developed ETL pipeline for migrating legacy content to AT Protocol, supporting bulk series/episode migration with dry-run validation and error tracking.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="mt-1.5 h-1.5 w-1.5 rounded-full bg-emerald-400 shrink-0"></span>
+                  <span><span class="font-medium text-slate-100">Zero-Trust Audio Security:</span> Implemented magic-number file validation (not extensions), ffmpeg metadata stripping, and 450MB limits — blocking spoofed uploads while preserving creator metadata privacy.</span>
+                </li>
+              </ul>
+            </article>
+
+            <article class="rounded-2xl border border-slate-800 bg-slate-900/60 p-5">
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+                <h3 class="text-base md:text-lg font-semibold text-slate-50">
+                  Travel Wishlist
+                  <a href="https://www.travelwishlist.app" target="_blank" rel="noreferrer" class="text-emerald-400 hover:text-emerald-300 text-sm font-normal ml-1">travelwishlist.app &rarr;</a>
+                </h3>
+                <span class="text-[11px] font-mono uppercase tracking-[0.2em] text-emerald-400">
+                  FastAPI · React · Docker · Postgres
+                </span>
+              </div>
+              <p class="text-sm text-slate-300 mb-4">Location-Based Travel Planner</p>
+              <ul class="space-y-2 text-sm text-slate-300">
+                <li class="flex items-start gap-2">
+                  <span class="mt-1.5 h-1.5 w-1.5 rounded-full bg-emerald-400 shrink-0"></span>
+                  <span><span class="font-medium text-slate-100">Architecture & Design:</span> Built with FastAPI, PostgreSQL, and Docker. Implemented JWT authentication, Pydantic validation, and a reusable CRUD service layer.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="mt-1.5 h-1.5 w-1.5 rounded-full bg-emerald-400 shrink-0"></span>
+                  <span><span class="font-medium text-slate-100">Weather API Integration:</span> Built city-based weather lookup system integrating external weather APIs with 100ms response times.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="mt-1.5 h-1.5 w-1.5 rounded-full bg-emerald-400 shrink-0"></span>
+                  <span><span class="font-medium text-slate-100">Calendar-Based Itinerary System:</span> Created monthly/agenda calendar views for trip planning with date-based organization of saved cities and travel scheduling.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="mt-1.5 h-1.5 w-1.5 rounded-full bg-emerald-400 shrink-0"></span>
+                  <span><span class="font-medium text-slate-100">Interactive Map Feature:</span> Mapping layer for geographic visualization of saved destinations.</span>
+                </li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="border-b border-slate-800/80 bg-slate-950">
+        <div class="max-w-5xl mx-auto px-4 py-12 md:py-16">
+          <h2 class="text-xs font-mono uppercase tracking-[0.2em] text-emerald-400 mb-6">Skills</h2>
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4 text-sm">
+            <div class="rounded-2xl border border-slate-800 bg-slate-900/60 p-4">
+              <h3 class="text-xs font-mono uppercase tracking-[0.2em] text-emerald-400 mb-2">Languages</h3>
+              <p class="text-slate-300">Python, JavaScript, TypeScript, SQL</p>
+            </div>
+            <div class="rounded-2xl border border-slate-800 bg-slate-900/60 p-4">
+              <h3 class="text-xs font-mono uppercase tracking-[0.2em] text-emerald-400 mb-2">Databases</h3>
+              <p class="text-slate-300">PostgreSQL</p>
+            </div>
+            <div class="rounded-2xl border border-slate-800 bg-slate-900/60 p-4">
+              <h3 class="text-xs font-mono uppercase tracking-[0.2em] text-emerald-400 mb-2">Data & ETL</h3>
+              <p class="text-slate-300">Pandas, Pydantic Validators, Scheduled Jobs, batch processing, CSV Ingestion, JSON Pipelines</p>
+            </div>
+            <div class="rounded-2xl border border-slate-800 bg-slate-900/60 p-4">
+              <h3 class="text-xs font-mono uppercase tracking-[0.2em] text-emerald-400 mb-2">DevOps & Tooling</h3>
+              <p class="text-slate-300">Docker, Alembic, Git, GitHub, JWT, pytest, Node.js, Sentry, OpenTelemetry, structured logging</p>
+            </div>
+            <div class="rounded-2xl border border-slate-800 bg-slate-900/60 p-4">
+              <h3 class="text-xs font-mono uppercase tracking-[0.2em] text-emerald-400 mb-2">Cloud & Infrastructure</h3>
+              <p class="text-slate-300">AWS (EC2, Elastic Beanstalk, S3), CI/CD (CodeQL, Gitleaks, Bandit), Cloudflare R2, Hetzner</p>
+            </div>
+            <div class="rounded-2xl border border-slate-800 bg-slate-900/60 p-4">
+              <h3 class="text-xs font-mono uppercase tracking-[0.2em] text-emerald-400 mb-2">Frameworks</h3>
+              <p class="text-slate-300">FastAPI, Fastify, SQLAlchemy 2.0, Pydantic, Django, React, Prisma ORM</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="border-b border-slate-800/80 bg-slate-950">
+        <div class="max-w-5xl mx-auto px-4 py-12 md:py-16">
+          <h2 class="text-xs font-mono uppercase tracking-[0.2em] text-emerald-400 mb-6">Experience</h2>
+          <div class="space-y-8">
+            <div>
+              <div class="flex flex-wrap items-baseline justify-between gap-2 mb-2">
+                <h3 class="text-base md:text-lg font-semibold text-slate-50">Backend Developer (Self-Employed)</h3>
+                <span class="text-xs text-slate-500">Jan 2025 – Present</span>
+              </div>
+              <p class="text-sm text-emerald-400 mb-3">Talk — Social Connection Platform (Netherlands)</p>
+              <ul class="space-y-2 text-sm text-slate-300">
+                <li class="flex items-start gap-2">
+                  <span class="mt-1.5 h-1.5 w-1.5 rounded-full bg-emerald-400 shrink-0"></span>
+                  <span>Developed and deployed a privacy-compliant web app supporting 200+ university students using React, Vite, Tailwind, and FastAPI backend integrations.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="mt-1.5 h-1.5 w-1.5 rounded-full bg-emerald-400 shrink-0"></span>
+                  <span>Created a QR code to trigger data entries between physical and digital experiences for social experiments, enabling real-time participation and improving data collection efficiency.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="mt-1.5 h-1.5 w-1.5 rounded-full bg-emerald-400 shrink-0"></span>
+                  <span>Built automated data pipelines and dashboards converting raw activity into insights, reducing manual reporting effort by 90%.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="mt-1.5 h-1.5 w-1.5 rounded-full bg-emerald-400 shrink-0"></span>
+                  <span>Consulted with team and users, leading to decreased onboarding steps and increased user retention in live trials.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="mt-1.5 h-1.5 w-1.5 rounded-full bg-emerald-400 shrink-0"></span>
+                  <span>Collaborated with founders to align analytics and engagement metrics for research and product direction.</span>
+                </li>
+              </ul>
+              <div class="flex flex-wrap gap-2 mt-3 text-[11px] text-slate-400">
+                <span class="rounded-full border border-slate-700 px-2 py-0.5">TypeScript</span>
+                <span class="rounded-full border border-slate-700 px-2 py-0.5">React</span>
+                <span class="rounded-full border border-slate-700 px-2 py-0.5">Tailwind</span>
+                <span class="rounded-full border border-slate-700 px-2 py-0.5">Vite</span>
+                <span class="rounded-full border border-slate-700 px-2 py-0.5">Cloudflare</span>
+                <span class="rounded-full border border-slate-700 px-2 py-0.5">Plausible Analytics</span>
+              </div>
+            </div>
+
+            <div class="border-t border-slate-800 pt-8">
+              <div class="flex flex-wrap items-baseline justify-between gap-2 mb-2">
+                <h3 class="text-base md:text-lg font-semibold text-slate-50">Journeyman Inside Wireman</h3>
+                <span class="text-xs text-slate-500">Aug 2023 – 2025</span>
+              </div>
+              <p class="text-sm text-emerald-400 mb-3">IBEW 153</p>
+              <ul class="space-y-2 text-sm text-slate-300">
+                <li class="flex items-start gap-2">
+                  <span class="mt-1.5 h-1.5 w-1.5 rounded-full bg-emerald-400 shrink-0"></span>
+                  <span>Led diagnostics and electrical installations across commercial builds, coordinating with engineers and safety inspectors to exceed schedule and safety goals.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="mt-1.5 h-1.5 w-1.5 rounded-full bg-emerald-400 shrink-0"></span>
+                  <span>Applied systematic problem-solving and quality control methods transferable to backend development workflows.</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="border-t border-slate-800 pt-8">
+              <div class="flex flex-wrap items-baseline justify-between gap-2 mb-2">
+                <h3 class="text-base md:text-lg font-semibold text-slate-50">Electrician</h3>
+                <span class="text-xs text-slate-500">Dec 2021 – Jan 2023</span>
+              </div>
+              <p class="text-sm text-emerald-400 mb-3">Wolverine Electrical Contracting</p>
+              <ul class="space-y-2 text-sm text-slate-300">
+                <li class="flex items-start gap-2">
+                  <span class="mt-1.5 h-1.5 w-1.5 rounded-full bg-emerald-400 shrink-0"></span>
+                  <span>Managed installations, testing, and troubleshooting in high-demand environments, reinforcing reliability and precision under pressure.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="mt-1.5 h-1.5 w-1.5 rounded-full bg-emerald-400 shrink-0"></span>
+                  <span>Supported project planning and data-driven reporting for equipment installations.</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="border-t border-slate-800 pt-8">
+              <div class="flex flex-wrap items-baseline justify-between gap-2 mb-2">
+                <h3 class="text-base md:text-lg font-semibold text-slate-50">Electrician Apprentice</h3>
+                <span class="text-xs text-slate-500">Sep 2017 – Jan 2022</span>
+              </div>
+              <p class="text-sm text-emerald-400 mb-3">Gaylor Electric, Inc.</p>
+              <ul class="space-y-2 text-sm text-slate-300">
+                <li class="flex items-start gap-2">
+                  <span class="mt-1.5 h-1.5 w-1.5 rounded-full bg-emerald-400 shrink-0"></span>
+                  <span>Completed structured training in electrical theory, automation systems, and safety compliance.</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-slate-950">
+        <div class="max-w-5xl mx-auto px-4 py-12 md:py-16">
+          <h2 class="text-xs font-mono uppercase tracking-[0.2em] text-emerald-400 mb-4">Core Competencies</h2>
+          <div class="flex flex-wrap gap-2 text-[11px] text-slate-300">
+            <span class="rounded-full border border-slate-700 px-3 py-1">REST API Design</span>
+            <span class="rounded-full border border-slate-700 px-3 py-1">Authentication & Authorization</span>
+            <span class="rounded-full border border-slate-700 px-3 py-1">Data Modeling</span>
+            <span class="rounded-full border border-slate-700 px-3 py-1">Distributed Systems</span>
+            <span class="rounded-full border border-slate-700 px-3 py-1">AT Protocol</span>
+            <span class="rounded-full border border-slate-700 px-3 py-1">WebSocket</span>
+            <span class="rounded-full border border-slate-700 px-3 py-1">Real-time Event Processing</span>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="border-t border-slate-800 bg-slate-950">
+      <div class="max-w-5xl mx-auto px-4 py-4 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-slate-500">
+        <p>&copy; <span id="year"></span> Jared Lemler. Built with care.</p>
+        <a href="/" class="hover:text-emerald-400 transition">&larr; Back to home</a>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
