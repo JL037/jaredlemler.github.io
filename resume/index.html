@@ -89,7 +89,7 @@
               Backend Engineer with a craftsman's approach — 8 years in electrical systems, now building software that is safe, reliable, and maintainable. My electrician background honed my systems thinking: coordinating teams, reading complex plans, and building infrastructure that can't fail. I bring the same patience and troubleshooting discipline from wiring buildings to designing APIs, databases, and containerized services.
             </p>
             <p class="text-sm md:text-base text-slate-300 leading-relaxed mt-3">
-              Technically grounded in Python/FastAPI and TypeScript/Fastify, with production experience in PostgreSQL, Prisma, Docker. Recently architected <span class="text-emerald-300 font-medium">VoxPort</span>, a federated podcast platform on the AT Protocol, building high-throughput data pipelines (1,000 event queues, 100-event batching, 95% I/O reduction) under real-world constraints. I work with honest communication, clear ownership, and passion for contributing to teams.
+              Technically grounded in Python/FastAPI and TypeScript/Fastify, with production experience in PostgreSQL, Prisma, Docker. Recently architected <span class="text-emerald-300 font-medium">VoxPort</span>, a federated podcast platform on the AT Protocol, building high-throughput data pipelines (1,000 event bounded in-memory queue, 100 event batched persistence, ~95% I/O reduction) under real-world constraints. I work with honest communication, clear ownership, and passion for contributing to teams.
             </p>
           </div>
         </div>
@@ -113,11 +113,11 @@
               <ul class="space-y-2 text-sm text-slate-300">
                 <li class="flex items-start gap-2">
                   <span class="mt-1.5 h-1.5 w-1.5 rounded-full bg-emerald-400 shrink-0"></span>
-                  <span><span class="font-medium text-slate-100">Zero-Downtime AT Protocol Federation:</span> Built resilient WebSocket consumer surviving 10+ reconnection cycles with bounded memory backpressure (1,000 event cap), processing 7+ collections with 100-event batching. Achieved ~95% I/O reduction vs. naive per-event persistence.</span>
+                  <span><span class="font-medium text-slate-100">Zero-Downtime AT Protocol Federation:</span> Built resilient WebSocket consumer surviving 10 reconnection cycles with exponential backoff and cooloff, with bounded memory backpressure (1,000 event cap per worker), processing 6 collections with 100 event batching. Achieved ~95% I/O reduction vs. naive per-event persistence.</span>
                 </li>
                 <li class="flex items-start gap-2">
                   <span class="mt-1.5 h-1.5 w-1.5 rounded-full bg-emerald-400 shrink-0"></span>
-                  <span><span class="font-medium text-slate-100">Engagement Analytics Engine:</span> Built hourly velocity aggregation system tracking engagement across 1h to 168h (7-day) windows using a weighted scoring algorithm (follows=10x, likes=1x, mentions=5x) for real-time trending detection via hourly scheduled jobs.</span>
+                  <span><span class="font-medium text-slate-100">Engagement Analytics Engine:</span> Built hourly velocity aggregation system tracking engagement across 1h to 168h (7-day) windows using a weighted scoring algorithm (likes=1x, mentions=5x) for real-time trending detection via hourly scheduled jobs.</span>
                 </li>
                 <li class="flex items-start gap-2">
                   <span class="mt-1.5 h-1.5 w-1.5 rounded-full bg-emerald-400 shrink-0"></span>
@@ -125,7 +125,7 @@
                 </li>
                 <li class="flex items-start gap-2">
                   <span class="mt-1.5 h-1.5 w-1.5 rounded-full bg-emerald-400 shrink-0"></span>
-                  <span><span class="font-medium text-slate-100">Relational Data Architecture:</span> Designed 15+ entity normalized schema with time-series aggregation tables for historical trend analysis.</span>
+                  <span><span class="font-medium text-slate-100">Relational Data Architecture:</span> Designed 26 entity normalized schema with time-series aggregation tables for historical trend analysis.</span>
                 </li>
                 <li class="flex items-start gap-2">
                   <span class="mt-1.5 h-1.5 w-1.5 rounded-full bg-emerald-400 shrink-0"></span>
@@ -141,11 +141,7 @@
                 </li>
                 <li class="flex items-start gap-2">
                   <span class="mt-1.5 h-1.5 w-1.5 rounded-full bg-emerald-400 shrink-0"></span>
-                  <span><span class="font-medium text-slate-100">Audio Extraction Worker:</span> Dedicated ffmpeg worker with SSRF guards (private/loopback rejection, redirect re-checks), <code class="text-emerald-300">FOR UPDATE SKIP LOCKED</code> job claiming, and per-host politeness — scales to zero when idle on Fly.io.</span>
-                </li>
-                <li class="flex items-start gap-2">
-                  <span class="mt-1.5 h-1.5 w-1.5 rounded-full bg-emerald-400 shrink-0"></span>
-                  <span><span class="font-medium text-slate-100">Multi-Environment Production Deploy:</span> API on Fly.io, web on Vercel, Postgres on Neon (dev/staging/prod branches with 29 migrations), Cloudflare R2 for media, Sentry + Axiom + OpenTelemetry observability stack.</span>
+                  <span><span class="font-medium text-slate-100">Distributed Extraction Worker:</span> Built standalone Fly.io worker claiming MediaJob rows via <code class="text-emerald-300">FOR UPDATE SKIP LOCKED</code> with per-source-host politeness gating (1 concurrent job per host), exponential backoff retry (30s/60s/120s, max 3 attempts), graceful shutdown finishing in-flight jobs, and scale-to-zero idle behavior. Keeping ffmpeg and outbound fetches out of request-serving API.</span>
                 </li>
               </ul>
             </article>
@@ -296,52 +292,9 @@
 
             <div class="border-t border-slate-800 pt-8">
               <div class="flex flex-wrap items-baseline justify-between gap-2 mb-2">
-                <h3 class="text-base md:text-lg font-semibold text-slate-50">Journeyman Inside Wireman</h3>
-                <span class="text-xs text-slate-500">Aug 2023 – 2025</span>
+                <h3 class="text-base md:text-lg font-semibold text-slate-50">Journeyman Electrician</h3>
+                <span class="text-xs text-slate-500">2017 – 2025</span>
               </div>
-              <p class="text-sm text-emerald-400 mb-3">IBEW 153</p>
-              <ul class="space-y-2 text-sm text-slate-300">
-                <li class="flex items-start gap-2">
-                  <span class="mt-1.5 h-1.5 w-1.5 rounded-full bg-emerald-400 shrink-0"></span>
-                  <span>Led diagnostics and electrical installations across commercial builds, coordinating with engineers and safety inspectors to exceed schedule and safety goals.</span>
-                </li>
-                <li class="flex items-start gap-2">
-                  <span class="mt-1.5 h-1.5 w-1.5 rounded-full bg-emerald-400 shrink-0"></span>
-                  <span>Applied systematic problem-solving and quality control methods transferable to backend development workflows.</span>
-                </li>
-              </ul>
-            </div>
-
-            <div class="border-t border-slate-800 pt-8">
-              <div class="flex flex-wrap items-baseline justify-between gap-2 mb-2">
-                <h3 class="text-base md:text-lg font-semibold text-slate-50">Electrician</h3>
-                <span class="text-xs text-slate-500">Dec 2021 – Jan 2023</span>
-              </div>
-              <p class="text-sm text-emerald-400 mb-3">Wolverine Electrical Contracting</p>
-              <ul class="space-y-2 text-sm text-slate-300">
-                <li class="flex items-start gap-2">
-                  <span class="mt-1.5 h-1.5 w-1.5 rounded-full bg-emerald-400 shrink-0"></span>
-                  <span>Managed installations, testing, and troubleshooting in high-demand environments, reinforcing reliability and precision under pressure.</span>
-                </li>
-                <li class="flex items-start gap-2">
-                  <span class="mt-1.5 h-1.5 w-1.5 rounded-full bg-emerald-400 shrink-0"></span>
-                  <span>Supported project planning and data-driven reporting for equipment installations.</span>
-                </li>
-              </ul>
-            </div>
-
-            <div class="border-t border-slate-800 pt-8">
-              <div class="flex flex-wrap items-baseline justify-between gap-2 mb-2">
-                <h3 class="text-base md:text-lg font-semibold text-slate-50">Electrician Apprentice</h3>
-                <span class="text-xs text-slate-500">Sep 2017 – Jan 2022</span>
-              </div>
-              <p class="text-sm text-emerald-400 mb-3">Gaylor Electric, Inc.</p>
-              <ul class="space-y-2 text-sm text-slate-300">
-                <li class="flex items-start gap-2">
-                  <span class="mt-1.5 h-1.5 w-1.5 rounded-full bg-emerald-400 shrink-0"></span>
-                  <span>Completed structured training in electrical theory, automation systems, and safety compliance.</span>
-                </li>
-              </ul>
             </div>
           </div>
         </div>
