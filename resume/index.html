@@ -139,6 +139,42 @@
                   <span class="mt-1.5 h-1.5 w-1.5 rounded-full bg-emerald-400 shrink-0"></span>
                   <span><span class="font-medium text-slate-100">Zero-Trust Audio Security:</span> Implemented magic-number file validation (not extensions), ffmpeg metadata stripping, and 450MB limits — blocking spoofed uploads while preserving creator metadata privacy.</span>
                 </li>
+                <li class="flex items-start gap-2">
+                  <span class="mt-1.5 h-1.5 w-1.5 rounded-full bg-emerald-400 shrink-0"></span>
+                  <span><span class="font-medium text-slate-100">Audio Extraction Worker:</span> Dedicated ffmpeg worker with SSRF guards (private/loopback rejection, redirect re-checks), <code class="text-emerald-300">FOR UPDATE SKIP LOCKED</code> job claiming, and per-host politeness — scales to zero when idle on Fly.io.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="mt-1.5 h-1.5 w-1.5 rounded-full bg-emerald-400 shrink-0"></span>
+                  <span><span class="font-medium text-slate-100">Multi-Environment Production Deploy:</span> API on Fly.io, web on Vercel, Postgres on Neon (dev/staging/prod branches with 29 migrations), Cloudflare R2 for media, Sentry + Axiom + OpenTelemetry observability stack.</span>
+                </li>
+              </ul>
+            </article>
+
+            <article class="rounded-2xl border border-slate-800 bg-slate-900/60 p-5">
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+                <h3 class="text-base md:text-lg font-semibold text-slate-50">
+                  doc-lok
+                  <a href="https://www.npmjs.com/package/doc-lok" target="_blank" rel="noreferrer" class="text-emerald-400 hover:text-emerald-300 text-sm font-normal ml-1">npm &rarr;</a>
+                  <a href="https://github.com/JL037/doc-lok" target="_blank" rel="noreferrer" class="text-emerald-400 hover:text-emerald-300 text-sm font-normal ml-1">github &rarr;</a>
+                </h3>
+                <span class="text-[11px] font-mono uppercase tracking-[0.2em] text-emerald-400">
+                  TypeScript · Node.js · Zero-dep
+                </span>
+              </div>
+              <p class="text-sm text-slate-300 mb-4">Pre-prompt context condenser</p>
+              <ul class="space-y-2 text-sm text-slate-300">
+                <li class="flex items-start gap-2">
+                  <span class="mt-1.5 h-1.5 w-1.5 rounded-full bg-emerald-400 shrink-0"></span>
+                  <span><span class="font-medium text-slate-100">Context Window Optimization:</span> Engineered a TypeScript pre-prompt middleware that condenses prompt payloads by resolving remote markdown links into compact cryptographic markers (&lt;lok_id&gt;), drastically cutting context token consumption and API latency.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="mt-1.5 h-1.5 w-1.5 rounded-full bg-emerald-400 shrink-0"></span>
+                  <span><span class="font-medium text-slate-100">Conditional Caching Pipeline:</span> Built a two-phase network verification engine using HTTP HEAD probes and If-None-Match ETag validation to bypass full payload downloads for unchanged remote resources.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="mt-1.5 h-1.5 w-1.5 rounded-full bg-emerald-400 shrink-0"></span>
+                  <span><span class="font-medium text-slate-100">Zero-Dependency Architecture:</span> Authored a lightweight CLI and library relying exclusively on native Node.js APIs, eliminating third-party supply chain vulnerabilities and minimizing cold-start overhead.</span>
+                </li>
               </ul>
             </article>
 
@@ -194,15 +230,19 @@
             </div>
             <div class="rounded-2xl border border-slate-800 bg-slate-900/60 p-4">
               <h3 class="text-xs font-mono uppercase tracking-[0.2em] text-emerald-400 mb-2">DevOps & Tooling</h3>
-              <p class="text-slate-300">Docker, Alembic, Git, GitHub, JWT, pytest, Node.js, Sentry, OpenTelemetry, structured logging</p>
+              <p class="text-slate-300">Docker, Alembic, Git, GitHub, JWT, pytest, Node.js, Sentry, OpenTelemetry, structured logging, Axiom</p>
             </div>
             <div class="rounded-2xl border border-slate-800 bg-slate-900/60 p-4">
               <h3 class="text-xs font-mono uppercase tracking-[0.2em] text-emerald-400 mb-2">Cloud & Infrastructure</h3>
-              <p class="text-slate-300">AWS (EC2, Elastic Beanstalk, S3), CI/CD (CodeQL, Gitleaks, Bandit), Cloudflare R2, Hetzner</p>
+              <p class="text-slate-300">AWS (EC2, Elastic Beanstalk, S3), CI/CD (CodeQL, Gitleaks, Bandit), Cloudflare R2, Hetzner, Neon, Fly.io</p>
             </div>
             <div class="rounded-2xl border border-slate-800 bg-slate-900/60 p-4">
               <h3 class="text-xs font-mono uppercase tracking-[0.2em] text-emerald-400 mb-2">Frameworks</h3>
               <p class="text-slate-300">FastAPI, Fastify, SQLAlchemy 2.0, Pydantic, Django, React, Prisma ORM</p>
+            </div>
+            <div class="rounded-2xl border border-slate-800 bg-slate-900/60 p-4">
+              <h3 class="text-xs font-mono uppercase tracking-[0.2em] text-emerald-400 mb-2">AI Tools</h3>
+              <p class="text-slate-300">Zed, Devin, Devin Cloud, opencode, Mastra</p>
             </div>
           </div>
         </div>
@@ -215,13 +255,17 @@
             <div>
               <div class="flex flex-wrap items-baseline justify-between gap-2 mb-2">
                 <h3 class="text-base md:text-lg font-semibold text-slate-50">Backend Developer (Self-Employed)</h3>
-                <span class="text-xs text-slate-500">Jan 2025 – Present</span>
+                <span class="text-xs text-slate-500">Jan 2025 – Feb 2026</span>
               </div>
               <p class="text-sm text-emerald-400 mb-3">Talk — Social Connection Platform (Netherlands)</p>
               <ul class="space-y-2 text-sm text-slate-300">
                 <li class="flex items-start gap-2">
                   <span class="mt-1.5 h-1.5 w-1.5 rounded-full bg-emerald-400 shrink-0"></span>
                   <span>Developed and deployed a privacy-compliant web app supporting 200+ university students using React, Vite, Tailwind, and FastAPI backend integrations.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="mt-1.5 h-1.5 w-1.5 rounded-full bg-emerald-400 shrink-0"></span>
+                  <span>Translated founder vision into technical implementation using Lovable prototypes, delivering full-stack solutions.</span>
                 </li>
                 <li class="flex items-start gap-2">
                   <span class="mt-1.5 h-1.5 w-1.5 rounded-full bg-emerald-400 shrink-0"></span>

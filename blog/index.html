@@ -4,46 +4,100 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Blog — Jared Lemler</title>
+  <meta name="description" content="Writing about learning, backend dev, and projects." />
 
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <link rel="canonical" href="https://jaredlemler.com/blog/" />
 
   <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Jared Lemler" />
   <meta property="og:title" content="Blog — Jared Lemler" />
   <meta property="og:description" content="Writing about learning, backend dev, and projects." />
   <meta property="og:url" content="https://jaredlemler.com/blog/" />
   <meta property="og:image" content="https://jaredlemler.com/og/blog.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
 
-  <style>
-    body {
-      margin: 0 auto;
-      max-width: 800px;
-      padding: 32px;
-      background: #0d1117;
-      color: #c9d1d9;
-      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
-    }
-    a { color: #58a6ff; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    nav a { margin-right: 12px; }
-    .post { margin: 18px 0; }
-    .post time { color: #8b949e; font-size: .9rem; margin-right: 8px; }
-  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-  <nav>
-    <a href="/">Back to Home</a>
-  </nav>
+<body class="bg-slate-950 text-slate-100 antialiased">
+  <div class="min-h-screen flex flex-col">
+    <header class="border-b border-slate-800/80 bg-slate-950/80 backdrop-blur sticky top-0 z-20">
+      <div class="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between">
+        <a href="/" class="font-semibold tracking-tight text-slate-100">
+          jared<span class="text-emerald-400">.dev</span>
+        </a>
+        <nav class="hidden sm:flex gap-6 text-sm text-slate-300">
+          <a href="/#about" class="hover:text-emerald-400 transition">About</a>
+          <a href="/#projects" class="hover:text-emerald-400 transition">Projects</a>
+          <a href="/#writing" class="hover:text-emerald-400 transition">Writing</a>
+          <a href="/#contact" class="hover:text-emerald-400 transition">Contact</a>
+          <a href="/blog/" class="text-emerald-400">Blog</a>
+        </nav>
+      </div>
+    </header>
 
-  <main>
-    <h1>Blog</h1>
-    <p style="color:#8b949e">Posts I've published here first, then shared elsewhere.</p>
+    <main class="flex-1">
+      <section class="border-b border-slate-800/80 bg-gradient-to-b from-slate-950 to-slate-900">
+        <div class="max-w-3xl mx-auto px-4 py-12 md:py-16">
+          <p class="text-xs font-mono uppercase tracking-[0.2em] text-emerald-400/80 mb-3">Blog</p>
+          <h1 class="text-3xl md:text-4xl font-semibold tracking-tight text-slate-50 mb-3">
+            Learning in public.
+          </h1>
+          <p class="text-sm md:text-base text-slate-300">
+            Posts I've published here first, then shared elsewhere.
+          </p>
+        </div>
+      </section>
 
-    <div class="post">
-      <time datetime="2025-09-22">Sep 22, 2025</time>
-      <a href="/blog/in-person-events/">The Value of In-Person Events</a>
-    </div>
-  </main>
+      <section class="bg-slate-950">
+        <div class="max-w-3xl mx-auto px-4 py-12 md:py-16">
+          <div class="space-y-4">
+            <a
+              href="/blog/in-person-events/"
+              class="block rounded-2xl border border-slate-800 bg-slate-900/60 px-5 py-4 hover:border-emerald-400 transition"
+            >
+              <div class="flex items-center justify-between gap-4 mb-1">
+                <p class="font-medium text-slate-100">
+                  The Value of In-Person Events
+                </p>
+                <time datetime="2025-09-22" class="text-xs text-slate-500 shrink-0">Sep 22, 2025</time>
+              </div>
+              <p class="text-sm text-slate-400">
+                Why getting in the room beats watching the stream — lessons from CascadiaJS.
+              </p>
+            </a>
+          </div>
+
+          <div class="mt-8">
+            <p class="text-xs font-mono uppercase tracking-[0.2em] text-slate-400 mb-3">Also writing on</p>
+            <a
+              href="https://pckt.blog/@did:plc:tsjjh5uzepibeoujgscgfgo4"
+              target="_blank"
+              rel="noreferrer"
+              class="block rounded-2xl border border-emerald-800/60 bg-emerald-950/30 px-5 py-4 hover:border-emerald-400 transition"
+            >
+              <p class="font-medium text-slate-100">
+                pckt.blog &rarr;
+              </p>
+              <p class="text-sm text-slate-400 mt-1">
+                My latest posts live on pckt.blog — read them there.
+              </p>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="border-t border-slate-800 bg-slate-950">
+      <div class="max-w-5xl mx-auto px-4 py-4 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-slate-500">
+        <p>&copy; <span id="year"></span> Jared Lemler. Built with care.</p>
+        <a href="/" class="hover:text-emerald-400 transition">&larr; Back to home</a>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>

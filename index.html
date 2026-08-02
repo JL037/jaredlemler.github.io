@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta
     name="description"
-    content="From electrician to backend engineer. I build practical systems with Python, FastAPI, and Postgres to solve real problems for people and animals."
+    content="From electrician to backend engineer. I build practical systems with Python, FastAPI, Postgres, and Docker to solve real problems — federated platforms, data pipelines, and developer tooling."
   />
 
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -14,8 +14,8 @@
 
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Jared Lemler" />
-  <meta property="og:title" content="Jared Lemler | Backend Developer" />
-  <meta property="og:description" content="From electrician to developer - building full-stack applications with Python, FastAPI, PostgreSQL, TypeScript, and React. Projects, writing and ways to get in touch." />
+  <meta property="og:title" content="Jared Lemler – Backend Engineer & Builder" />
+  <meta property="og:description" content="From electrician to backend engineer — building federated platforms, data pipelines, and developer tooling with Python, FastAPI, Postgres, TypeScript, and React." />
   <meta property="og:url" content="https://jaredlemler.com/" />
   <meta property="og:image" content="https://jaredlemler.com/og/home.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
@@ -34,7 +34,7 @@
       "https://github.com/JL037",
       "https://linkedin.com/in/jaredlemler",
       "https://x.com/JaredLemler",
-      "https://bsky.app/profile/jaredlemler.bsky.social"
+      "https://bsky.app/profile/jaredlemler.com"
     ]
   }
   </script>
@@ -51,6 +51,26 @@
           jared<span class="text-emerald-400">.dev</span>
         </a>
         <nav class="hidden sm:flex gap-6 text-sm text-slate-300">
+          <a href="#about" class="hover:text-emerald-400 transition">About</a>
+          <a href="#skills" class="hover:text-emerald-400 transition">Skills</a>
+          <a href="#projects" class="hover:text-emerald-400 transition">Projects</a>
+          <a href="#writing" class="hover:text-emerald-400 transition">Writing</a>
+          <a href="#contact" class="hover:text-emerald-400 transition">Contact</a>
+          <a href="/blog/" class="hover:text-emerald-400 transition">Blog</a>
+        </nav>
+        <button
+          id="nav-toggle"
+          class="sm:hidden text-slate-300 hover:text-emerald-400 transition p-1"
+          aria-label="Toggle navigation"
+          aria-expanded="false"
+        >
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+      <div id="nav-mobile" class="hidden sm:hidden border-t border-slate-800/80 bg-slate-950">
+        <nav class="max-w-5xl mx-auto px-4 py-3 flex flex-col gap-3 text-sm text-slate-300">
           <a href="#about" class="hover:text-emerald-400 transition">About</a>
           <a href="#skills" class="hover:text-emerald-400 transition">Skills</a>
           <a href="#projects" class="hover:text-emerald-400 transition">Projects</a>
@@ -76,7 +96,7 @@
               I'm <span class="font-medium text-slate-100">Jared Lemler</span>, a backend engineer and former
               electrician. I build practical systems with
               <span class="font-medium text-emerald-300">Python, FastAPI, Postgres, and Docker</span>
-              — focused on real-world problems, especially for animals and the people who care for them.
+              — federated platforms, data pipelines, and developer tooling that solve real problems.
             </p>
             <p class="text-sm text-slate-400 mb-8">
               Calm under pressure, obsessed with craftsmanship, and always looking for clearer, more honest systems.
@@ -112,36 +132,36 @@
                 alt="Photo of Jared Lemler"
                 class="w-48 h-48 md:w-64 md:h-64 object-cover rounded-2xl border border-slate-800 shadow-lg shadow-black/40 mx-auto md:mx-0"
               />
-              <!-- At a glance card -->
+              <!-- Currently card -->
               <div class="rounded-2xl border border-slate-800 bg-slate-900/60 p-5 shadow-lg shadow-black/40">
-                <p class="text-xs font-mono uppercase tracking-[0.2em] text-slate-400 mb-3">
-                  At a glance
+                <p class="text-xs font-mono uppercase tracking-[0.2em] text-emerald-400 mb-3">
+                  Currently
                 </p>
                 <ul class="space-y-3 text-sm text-slate-200">
                   <li class="flex items-start gap-2">
-                    <span class="mt-1 h-1.5 w-1.5 rounded-full bg-emerald-400"></span>
+                    <span class="mt-1 h-1.5 w-1.5 rounded-full bg-emerald-400 shrink-0"></span>
                     <div>
-                      <p class="font-medium">Backend-first</p>
+                      <p class="font-medium">Building VoxPort Studio</p>
                       <p class="text-slate-400">
-                        FastAPI, Fastify, SQL, Postgres, system design, and testability.
+                        Federated podcast platform on the AT Protocol — extraction worker, multi-env deploy, observability stack.
                       </p>
                     </div>
                   </li>
                   <li class="flex items-start gap-2">
-                    <span class="mt-1 h-1.5 w-1.5 rounded-full bg-emerald-400"></span>
+                    <span class="mt-1 h-1.5 w-1.5 rounded-full bg-emerald-400 shrink-0"></span>
                     <div>
-                      <p class="font-medium">From trades to tech</p>
+                      <p class="font-medium">Shipping doc-lok</p>
                       <p class="text-slate-400">
-                        Years wiring real infrastructure before wiring backend systems.
+                        Zero-dependency npm package for condensing LLM context windows.
                       </p>
                     </div>
                   </li>
                   <li class="flex items-start gap-2">
-                    <span class="mt-1 h-1.5 w-1.5 rounded-full bg-emerald-400"></span>
+                    <span class="mt-1 h-1.5 w-1.5 rounded-full bg-emerald-400 shrink-0"></span>
                     <div>
-                      <p class="font-medium">Building in public</p>
+                      <p class="font-medium">Learning</p>
                       <p class="text-slate-400">
-                        Learning openly, sharing the process on VoxPort, ATProto, and micro-SaaS experiments.
+                        Podcasting domain internals, distributed systems, and AI-native dev workflows.
                       </p>
                     </div>
                   </li>
@@ -169,6 +189,16 @@
               into software. Now I use the same mindset to design APIs, databases, and services that solve
               problems for people and animals instead of just chasing hype.
             </p>
+            <div class="rounded-2xl border border-emerald-700/50 bg-emerald-950/20 p-5 mb-4">
+              <p class="text-xs font-mono uppercase tracking-[0.2em] text-emerald-400 mb-2">
+                How I learn new domains
+              </p>
+              <p class="text-sm md:text-base text-slate-200 leading-relaxed">
+                I pick up new domains fast. Podcasting pulled me in, and I taught myself how a platform actually
+                works — RSS distribution, hosting economics, the AT Protocol as an identity and record layer —
+                well enough to architect one. <span class="font-medium text-emerald-300">That's the pattern: get curious, learn the domain honestly, then build.</span>
+              </p>
+            </div>
             <p class="text-sm md:text-base text-slate-300">
               I care about <span class="font-medium text-slate-100">honesty, ownership, and better systems</span>.
               That shows up in the tools I use (Python, FastAPI, Postgres, ATProto), the projects I build,
@@ -188,8 +218,9 @@
             <div class="rounded-2xl border border-slate-800 bg-slate-900/60 p-4">
               <h3 class="text-xs font-mono uppercase tracking-[0.2em] text-emerald-400 mb-2">Outside of code</h3>
               <p class="text-slate-300">
-                I live in California with my wife and our dogs. Outside of work you'll usually find me gaming,
-                reading docs I don't strictly need yet, or thinking about how to give animals a better life.
+                I live in the San Francisco Bay Area with my wife and our dogs. Outside of work you'll usually find me
+                gaming, hiking and exploring areas I haven't been, and going down rabbit holes of topics that are
+                interesting and new to me.
               </p>
             </div>
           </div>
@@ -199,9 +230,12 @@
       <!-- Skills -->
       <section id="skills" class="border-b border-slate-800/80 bg-slate-950">
         <div class="max-w-5xl mx-auto px-4 py-12 md:py-16">
-          <h2 class="text-xl md:text-2xl font-semibold text-slate-50 mb-6">
+          <h2 class="text-xl md:text-2xl font-semibold text-slate-50 mb-2">
             What I'm good at.
           </h2>
+          <p class="text-sm text-slate-400 mb-6">
+            Backend-first, with the toolchain and discipline to ship and operate it.
+          </p>
           <div class="grid md:grid-cols-3 gap-6 text-sm">
             <div class="rounded-2xl border border-slate-800 bg-slate-900/60 p-5">
               <h3 class="text-xs font-mono uppercase tracking-[0.2em] text-emerald-400 mb-3">
@@ -209,10 +243,13 @@
               </h3>
               <ul class="space-y-1.5 text-slate-300">
                 <li>Python, FastAPI, Django</li>
-                <li>TypeScript, Fastify</li>
-                <li>PostgreSQL, SQLAlchemy</li>
-                <li>API design & auth (JWT)</li>
-                <li>Background jobs & ETL</li>
+                <li>TypeScript, Fastify, Node.js</li>
+                <li>PostgreSQL, SQLAlchemy 2.0, Prisma</li>
+                <li>REST API design, auth (JWT), data modeling</li>
+                <li>Background jobs, ETL, real-time event processing</li>
+                <li>WebSocket consumers & backpressure</li>
+                <li>Pydantic validation, Alembic migrations</li>
+                <li>Pandas, CSV/JSON pipelines, batch processing</li>
               </ul>
             </div>
             <div class="rounded-2xl border border-slate-800 bg-slate-900/60 p-5">
@@ -221,10 +258,13 @@
               </h3>
               <ul class="space-y-1.5 text-slate-300">
                 <li>Docker & docker-compose</li>
-                <li>Env & config management</li>
+                <li>CI/CD: CodeQL, Gitleaks, Bandit</li>
+                <li>Observability: Sentry, OpenTelemetry, Axiom</li>
+                <li>Cloudflare R2, Fly.io, Neon, AWS (EC2, S3)</li>
                 <li>Testing with pytest / Vitest</li>
-                <li>CI/CD, basic observability</li>
-                <li>ATProto / decentralized apps</li>
+                <li>AT Protocol & decentralized apps</li>
+                <li>Multi-env deploys (dev/staging/prod branching)</li>
+                <li>Structured logging & access-log monitoring</li>
               </ul>
             </div>
             <div class="rounded-2xl border border-slate-800 bg-slate-900/60 p-5">
@@ -235,8 +275,9 @@
                 <li>Breaks work into clear steps</li>
                 <li>Calm, honest communication</li>
                 <li>Strong bias toward learning</li>
-                <li>Care for animals & people</li>
-                <li>Open to pairing and feedback</li>
+                <li><span class="font-medium text-slate-100">Docs as a progress compass:</span> has agents maintain clean, detailed markdown — status, worklogs, plans — so project state is always legible to humans and the next agent.</li>
+                <li><span class="font-medium text-slate-100">AI-native workflow:</span> treats agents as collaborators with structured handoffs, not magic buttons.</li>
+                <li><span class="font-medium text-slate-100">Learning out loud:</span> writes to understand, not just to publish.</li>
               </ul>
             </div>
           </div>
@@ -271,6 +312,20 @@
                 <a href="https://skills.sh/JL037/atproto-pro" target="_blank" rel="noreferrer" class="text-emerald-400 hover:text-emerald-300 underline underline-offset-2 transition">AT Protocol skill</a>
                 on skills.sh to help others build on the protocol.
               </p>
+              <ul class="space-y-2 text-sm text-slate-300 mb-3">
+                <li class="flex items-start gap-2">
+                  <span class="mt-1.5 h-1.5 w-1.5 rounded-full bg-emerald-400 shrink-0"></span>
+                  <span><span class="font-medium text-slate-100">Federated ingestion at scale:</span> resilient WebSocket consumer with bounded memory backpressure (1,000-event cap) and 100-event batching — ~95% I/O reduction vs. per-event persistence.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="mt-1.5 h-1.5 w-1.5 rounded-full bg-emerald-400 shrink-0"></span>
+                  <span><span class="font-medium text-slate-100">Audio extraction worker:</span> dedicated ffmpeg worker with SSRF guards, <code class="text-emerald-300">FOR UPDATE SKIP LOCKED</code> job claiming, and Cloudflare R2 content-addressed storage.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="mt-1.5 h-1.5 w-1.5 rounded-full bg-emerald-400 shrink-0"></span>
+                  <span><span class="font-medium text-slate-100">Multi-env production deploy:</span> API on Fly.io, web on Vercel, Postgres on Neon (dev/staging/prod branches), with Sentry + Axiom + OpenTelemetry observability.</span>
+                </li>
+              </ul>
               <p class="text-xs text-slate-400 mb-3">
                 Why it matters: I care about ownership and systems that don't trap people. This project pushes me to
                 think beyond a single app and into protocols and ecosystems.
@@ -306,6 +361,20 @@
                 A real deployed app for saving, organizing, and analyzing travel. Combines a FastAPI/Postgres backend
                 with a React frontend, including map views and basic analytics around visits and plans.
               </p>
+              <ul class="space-y-2 text-sm text-slate-300 mb-3">
+                <li class="flex items-start gap-2">
+                  <span class="mt-1.5 h-1.5 w-1.5 rounded-full bg-emerald-400 shrink-0"></span>
+                  <span><span class="font-medium text-slate-100">Full-stack architecture:</span> FastAPI, PostgreSQL, and Docker with JWT auth, Pydantic validation, and a reusable CRUD service layer.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="mt-1.5 h-1.5 w-1.5 rounded-full bg-emerald-400 shrink-0"></span>
+                  <span><span class="font-medium text-slate-100">External API integration:</span> city-based weather lookup with ~100ms response times, plus an interactive map layer for geographic visualization.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="mt-1.5 h-1.5 w-1.5 rounded-full bg-emerald-400 shrink-0"></span>
+                  <span><span class="font-medium text-slate-100">Calendar itinerary system:</span> monthly/agenda views for trip planning with date-based organization of saved cities.</span>
+                </li>
+              </ul>
               <p class="text-xs text-slate-400 mb-3">
                 Why it matters: it's a complete loop — database design, APIs, frontend integration, deployment,
                 and iteration based on actual usage.
@@ -315,6 +384,65 @@
                 <span class="rounded-full border border-slate-700 px-2 py-0.5">PostgreSQL</span>
                 <span class="rounded-full border border-slate-700 px-2 py-0.5">React</span>
                 <span class="rounded-full border border-slate-700 px-2 py-0.5">Deployable</span>
+              </div>
+            </article>
+
+            <!-- doc-lok -->
+            <article class="rounded-2xl border border-slate-800 bg-slate-900/60 p-5">
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+                <h3 class="text-base md:text-lg font-semibold text-slate-50">
+                  doc-lok – Pre-prompt context condenser
+                </h3>
+                <span class="text-[11px] font-mono uppercase tracking-[0.2em] text-emerald-400">
+                  TypeScript · Node.js · Zero-dep
+                </span>
+              </div>
+              <p class="text-sm text-slate-300 mb-3">
+                A pre-prompt middleware that condenses link-bearing Markdown by resolving remote links into compact
+                cryptographic markers — cutting context token consumption and API latency for LLM workflows.
+                Published on npm with zero runtime dependencies.
+              </p>
+              <ul class="space-y-2 text-sm text-slate-300 mb-3">
+                <li class="flex items-start gap-2">
+                  <span class="mt-1.5 h-1.5 w-1.5 rounded-full bg-emerald-400 shrink-0"></span>
+                  <span><span class="font-medium text-slate-100">Context window optimization:</span> condenses prompt payloads by replacing unchanged remote Markdown links with compact <code class="text-emerald-300">&lt;lok_id&gt;</code> markers, drastically cutting token usage.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="mt-1.5 h-1.5 w-1.5 rounded-full bg-emerald-400 shrink-0"></span>
+                  <span><span class="font-medium text-slate-100">Conditional caching pipeline:</span> two-phase network verification using HTTP HEAD probes and <code class="text-emerald-300">If-None-Match</code> ETag validation to skip unchanged resources.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="mt-1.5 h-1.5 w-1.5 rounded-full bg-emerald-400 shrink-0"></span>
+                  <span><span class="font-medium text-slate-100">Zero-dependency architecture:</span> CLI and library built exclusively on native Node.js APIs — no third-party supply-chain risk, minimal cold-start overhead.</span>
+                </li>
+              </ul>
+              <p class="text-xs text-slate-400 mb-3">
+                Why it matters: a focused, shippable tool that solves a real LLM-context problem with a craftsman's
+                restraint — do one thing well, with no dependencies you don't need.
+              </p>
+              <div class="flex flex-wrap items-center gap-3">
+                <a
+                  href="https://www.npmjs.com/package/doc-lok"
+                  target="_blank"
+                  rel="noreferrer"
+                  class="inline-flex items-center rounded-full bg-emerald-500 hover:bg-emerald-400 text-slate-950 text-xs font-medium px-3 py-1.5 transition"
+                >
+                  npm package &rarr;
+                </a>
+                <a
+                  href="https://github.com/JL037/doc-lok"
+                  target="_blank"
+                  rel="noreferrer"
+                  class="inline-flex items-center rounded-full border border-slate-700 hover:border-emerald-400 text-slate-200 text-xs px-3 py-1.5 transition"
+                >
+                  Source on GitHub
+                </a>
+                <div class="flex flex-wrap gap-2 text-[11px] text-slate-300">
+                  <span class="rounded-full border border-slate-700 px-2 py-0.5">TypeScript</span>
+                  <span class="rounded-full border border-slate-700 px-2 py-0.5">Node.js</span>
+                  <span class="rounded-full border border-slate-700 px-2 py-0.5">SHA-256</span>
+                  <span class="rounded-full border border-slate-700 px-2 py-0.5">ETag</span>
+                </div>
               </div>
             </article>
           </div>
@@ -359,6 +487,19 @@
                 A straightforward look at what actually tripped me up with Docker and how I worked through it.
               </p>
             </a>
+            <a
+              href="https://pckt.blog/@did:plc:tsjjh5uzepibeoujgscgfgo4"
+              target="_blank"
+              rel="noreferrer"
+              class="block rounded-2xl border border-emerald-800/60 bg-emerald-950/30 px-4 py-3 hover:border-emerald-400 transition"
+            >
+              <p class="font-medium text-slate-100">
+                Newer writing on pckt.blog &rarr;
+              </p>
+              <p class="text-xs text-slate-400 mt-1">
+                My latest posts live on pckt.blog. Read them there.
+              </p>
+            </a>
           </div>
         </div>
       </section>
@@ -390,7 +531,7 @@
               GitHub
             </a>
             <a
-              href="https://bsky.app/profile/voxport.bsky.social"
+              href="https://bsky.app/profile/jaredlemler.com"
               target="_blank"
               rel="noreferrer"
               class="inline-flex items-center rounded-full border border-slate-700 hover:border-emerald-400 px-4 py-2 text-slate-200 transition"
@@ -421,6 +562,18 @@
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
+    const navToggle = document.getElementById("nav-toggle");
+    const navMobile = document.getElementById("nav-mobile");
+    navToggle.addEventListener("click", () => {
+      const open = navMobile.classList.toggle("hidden");
+      navToggle.setAttribute("aria-expanded", String(!open));
+    });
+    navMobile.querySelectorAll("a").forEach((a) =>
+      a.addEventListener("click", () => {
+        navMobile.classList.add("hidden");
+        navToggle.setAttribute("aria-expanded", "false");
+      })
+    );
   </script>
 </body>
 </html>
