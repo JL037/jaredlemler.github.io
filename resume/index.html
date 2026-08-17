@@ -21,9 +21,34 @@
 
   <style>
     @media print {
-      body { background: #fff !important; color: #000 !important; }
-      header, .no-print { display: none !important; }
-      section { break-inside: avoid; }
+      body { background: #fff !important; color: #000 !important; font-size: 10px; line-height: 1.35; }
+      header, .no-print, footer { display: none !important; }
+      section { padding-top: 0.3rem !important; padding-bottom: 0.3rem !important; }
+      article, .rounded-2xl { break-inside: avoid; }
+      section > div { padding-top: 0.3rem !important; padding-bottom: 0.3rem !important; }
+      section:first-of-type { padding-top: 0.2rem !important; padding-bottom: 0.2rem !important; }
+      section:first-of-type > div { padding-top: 0.2rem !important; padding-bottom: 0.2rem !important; }
+      * { background: #fff !important; color: #000 !important; border-color: #d4d4d8 !important; }
+      a { color: #000 !important; text-decoration: none !important; }
+      .text-emerald-400, .text-emerald-300 { color: #047857 !important; }
+      .bg-emerald-400, .bg-emerald-500 { background: #047857 !important; }
+      .rounded-2xl { border-radius: 0.35rem !important; padding: 0.4rem !important; border: 1px solid #d4d4d8 !important; }
+      h1 { font-size: 1.3rem !important; margin-bottom: 0.1rem !important; }
+      h2 { margin-bottom: 0.25rem !important; font-size: 0.7rem !important; }
+      h3 { font-size: 0.9rem !important; }
+      .text-3xl, .text-4xl { font-size: 1.3rem !important; }
+      .text-xs { font-size: 0.65rem !important; }
+      .text-sm { font-size: 0.78rem !important; }
+      .space-y-6 > * + * { margin-top: 0.35rem !important; }
+      .space-y-8 > * + * { margin-top: 0.5rem !important; }
+      .space-y-4 > * + * { margin-top: 0.25rem !important; }
+      .space-y-2 > * + * { margin-top: 0.12rem !important; }
+      .border-t { margin-top: 0.35rem !important; padding-top: 0.35rem !important; }
+      .mb-6 { margin-bottom: 0.35rem !important; }
+      .mb-4 { margin-bottom: 0.25rem !important; }
+      .mb-3 { margin-bottom: 0.2rem !important; }
+      .mb-2 { margin-bottom: 0.15rem !important; }
+      .mb-8 { margin-bottom: 0.4rem !important; }
       .print\:bg-white { background: #fff !important; }
       .print\:text-black { color: #000 !important; }
     }
@@ -218,7 +243,7 @@
             </div>
             <div class="rounded-2xl border border-slate-800 bg-slate-900/60 p-4">
               <h3 class="text-xs font-mono uppercase tracking-[0.2em] text-emerald-400 mb-2">Databases</h3>
-              <p class="text-slate-300">PostgreSQL</p>
+              <p class="text-slate-300">PostgreSQL, Prisma Postgres, Neon, Alembic migrations, schema design, indexing, time-series aggregation</p>
             </div>
             <div class="rounded-2xl border border-slate-800 bg-slate-900/60 p-4">
               <h3 class="text-xs font-mono uppercase tracking-[0.2em] text-emerald-400 mb-2">Data & ETL</h3>
@@ -235,10 +260,6 @@
             <div class="rounded-2xl border border-slate-800 bg-slate-900/60 p-4">
               <h3 class="text-xs font-mono uppercase tracking-[0.2em] text-emerald-400 mb-2">Frameworks</h3>
               <p class="text-slate-300">FastAPI, Fastify, SQLAlchemy 2.0, Pydantic, Django, React, Prisma ORM</p>
-            </div>
-            <div class="rounded-2xl border border-slate-800 bg-slate-900/60 p-4">
-              <h3 class="text-xs font-mono uppercase tracking-[0.2em] text-emerald-400 mb-2">AI Tools</h3>
-              <p class="text-slate-300">Zed, Devin, Devin Cloud, opencode, Mastra</p>
             </div>
           </div>
         </div>
@@ -291,10 +312,25 @@
             </div>
 
             <div class="border-t border-slate-800 pt-8">
-              <div class="flex flex-wrap items-baseline justify-between gap-2 mb-2">
+              <div class="flex flex-wrap items-baseline justify-between gap-2 mb-1">
                 <h3 class="text-base md:text-lg font-semibold text-slate-50">Journeyman Electrician</h3>
                 <span class="text-xs text-slate-500">2017 – 2025</span>
               </div>
+              <p class="text-sm text-emerald-400 mb-3">Gaylor Electric · Wolverine Electric · IBEW — Indiana &amp; Michigan</p>
+              <ul class="space-y-2 text-sm text-slate-300">
+                <li class="flex items-start gap-2">
+                  <span class="mt-1.5 h-1.5 w-1.5 rounded-full bg-emerald-400 shrink-0"></span>
+                  <span>Coordinated crews of 2–4 electricians on commercial jobsites, reading and interpreting complex electrical and architectural plans to execute installations on schedule and to code.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="mt-1.5 h-1.5 w-1.5 rounded-full bg-emerald-400 shrink-0"></span>
+                  <span>Built and maintained electrical infrastructure with zero tolerance for failure — troubleshooting live systems under time pressure and safety constraints, the same discipline I now apply to APIs, databases, and containerized services.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="mt-1.5 h-1.5 w-1.5 rounded-full bg-emerald-400 shrink-0"></span>
+                  <span>Completed electrical training through Associated Builders and Contractors (ABC) trade school and earned journeyman status; remain a dues-paying IBEW member able to return to union dispatch.</span>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
@@ -311,6 +347,27 @@
             <span class="rounded-full border border-slate-700 px-3 py-1">AT Protocol</span>
             <span class="rounded-full border border-slate-700 px-3 py-1">WebSocket</span>
             <span class="rounded-full border border-slate-700 px-3 py-1">Real-time Event Processing</span>
+          </div>
+        </div>
+      </section>
+      <section class="border-b border-slate-800/80 bg-slate-950">
+        <div class="max-w-5xl mx-auto px-4 py-12 md:py-16">
+          <h2 class="text-xs font-mono uppercase tracking-[0.2em] text-emerald-400 mb-6">Education &amp; Certifications</h2>
+          <div class="space-y-4">
+            <div class="rounded-2xl border border-slate-800 bg-slate-900/60 p-4">
+              <div class="flex flex-wrap items-baseline justify-between gap-2 mb-1">
+                <h3 class="text-sm font-semibold text-slate-100">Journeyman Electrician — Associated Builders and Contractors (ABC)</h3>
+                <span class="text-xs text-slate-500">Indiana</span>
+              </div>
+              <p class="text-sm text-slate-300">Completed electrical trade training through ABC, combining classroom instruction with on-the-job experience; earned journeyman status. Dues-paying IBEW member.</p>
+            </div>
+            <div class="rounded-2xl border border-slate-800 bg-slate-900/60 p-4">
+              <div class="flex flex-wrap items-baseline justify-between gap-2 mb-1">
+                <h3 class="text-sm font-semibold text-slate-100">Self-directed Software Engineering Study</h3>
+                <span class="text-xs text-slate-500">Ongoing</span>
+              </div>
+              <p class="text-sm text-slate-300">Python, FastAPI, PostgreSQL, distributed systems, REST API design, and AT Protocol — learned through building and shipping production software (VoxPort, doc-lok, Travel Wishlist) and through ongoing mentorship from senior engineers, including former Facebook and Microsoft engineers and a current Prisma platform architect.</p>
+            </div>
           </div>
         </div>
       </section>

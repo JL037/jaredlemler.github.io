@@ -1,0 +1,62 @@
+Jared Lemler
+Pacifica, CA  ·  jared@jaredlemler.com  ·  jaredlemler.com  ·  github.com/JL037  ·  linkedin.com/in/jaredlemler
+
+PROFESSIONAL SUMMARY
+Backend Engineer with a craftsman's approach — 8 years in electrical systems, now building software that is safe, reliable, and maintainable. My electrician background honed my systems thinking: coordinating teams, reading complex plans, and building infrastructure that can't fail. I bring the same patience and troubleshooting discipline from wiring buildings to designing APIs, databases, and containerized services.
+
+Technically grounded in Python/FastAPI and TypeScript/Fastify, with production experience in PostgreSQL, Prisma, and Docker. Recently architected VoxPort, a federated podcast platform on the AT Protocol, building high-throughput data pipelines (1,000-event bounded in-memory queue, 100-event batched persistence, ~95% I/O reduction) under real-world constraints. I work with honest communication, clear ownership, and a passion for contributing to teams.
+
+SKILLS
+- Languages: Python, JavaScript, TypeScript, SQL
+- Databases: PostgreSQL, Prisma Postgres, Neon, Alembic migrations, schema design, indexing, time-series aggregation
+- Data & ETL: Pandas, Pydantic validators, scheduled jobs (hourly/daily), batch processing, CSV ingestion, JSON pipelines
+- DevOps & Tooling: Docker, Alembic, Git, GitHub, JWT, pytest, Node.js, Sentry observability, OpenTelemetry tracing, structured logging, Axiom
+- Cloud & Infrastructure: AWS (EC2, Elastic Beanstalk, S3), CI/CD (CodeQL, Gitleaks, Bandit), Cloudflare R2 (content-addressed storage), Hetzner, Neon, Prisma Postgres, Fly.io
+- Frameworks / Libraries: FastAPI, Fastify, SQLAlchemy 2.0, Pydantic, Django, React, Prisma ORM
+- Core Competencies: REST API design, authentication & authorization, data modeling, distributed systems, AT Protocol, WebSocket, real-time event processing
+
+PROFESSIONAL EXPERIENCE
+
+Backend Developer (Self-Employed) — Talk, Social Connection Platform (Netherlands)
+Jan 2025 – Feb 2026  ·  Pacifica, CA
+- Developed and deployed a privacy-compliant web app supporting 200+ university students using React, Vite, Tailwind, and a FastAPI backend.
+- Translated founder vision into technical implementation using Lovable prototypes, delivering full-stack solutions.
+- Built a QR-code trigger connecting physical and digital experiences for social experiments, enabling real-time participation and more efficient data collection.
+- Built automated data pipelines and dashboards converting raw activity into insights, reducing manual reporting effort by 90%.
+- Consulted with the team and users to streamline onboarding, increasing user retention in live trials.
+- Collaborated with founders to align analytics and engagement metrics with research and product direction.
+Technologies: TypeScript, React, Plausible Analytics, Tailwind, Vite, Cloudflare
+
+Journeyman Electrician — Gaylor Electric · Wolverine Electric · IBEW
+2017 – 2025  ·  Indiana & Michigan
+- Coordinated crews of 2–4 electricians on commercial jobsites, reading and interpreting complex electrical and architectural plans to execute installations on schedule and to code.
+- Built and maintained electrical infrastructure with zero tolerance for failure — troubleshooting live systems under time pressure and safety constraints, the same discipline I now apply to APIs, databases, and containerized services.
+- Completed electrical training through Associated Builders and Contractors (ABC) trade school and earned journeyman status; remain a dues-paying IBEW member able to return to union dispatch.
+
+PROJECTS
+
+VoxPort (voxport.live) — Live podcast platform built on the AT Protocol
+- Live, shipped product: browser-based recording studio with AT Protocol OAuth sign-in, one-click publishing to Apple Podcasts & Spotify, and real-time social discovery features.
+- Zero-Downtime Federation: built a resilient WebSocket consumer surviving 10 reconnection cycles with exponential backoff, bounded memory backpressure (1,000-event cap per worker), and 100-event batching — ~95% I/O reduction vs. naive per-event persistence.
+- Distributed Extraction Worker: standalone Fly.io worker claiming jobs via FOR UPDATE SKIP LOCKED, per-source-host politeness gating, exponential backoff retry, and graceful shutdown — keeping ffmpeg and outbound fetches out of the request-serving API.
+- Scalable Media Infrastructure: integrated Cloudflare R2 for content-addressed blob storage, mapping CIDs to AT Protocol records for verifiable media distribution across federated nodes.
+- Relational Data Architecture: designed a 26-entity normalized schema with time-series aggregation tables for historical trend analysis and hourly engagement-velocity scoring.
+- Zero-Trust Audio Security: implemented magic-number file validation, ffmpeg metadata stripping, and upload size limits to block spoofed files while preserving creator privacy.
+
+doc-lok (github.com/JL037/doc-lok) — Zero-dependency npm package · TypeScript
+- Context Window Optimization: TypeScript pre-prompt middleware that condenses prompt payloads by resolving remote Markdown links into compact cryptographic markers, cutting context token consumption and API latency.
+- Conditional Caching Pipeline: two-phase network verification using HTTP HEAD probes and If-None-Match ETag validation to skip unchanged remote resources.
+- Zero-Dependency Architecture: CLI and library built exclusively on native Node.js APIs — no third-party supply-chain risk, minimal cold-start overhead. Published on npm.
+
+Travel Wishlist (travelwishlist.app) — Full-stack travel planner · FastAPI · React
+- Architecture & Design: built with FastAPI, PostgreSQL, and Docker; JWT authentication, Pydantic validation, and a reusable CRUD service layer.
+- Weather & Maps Integration: city-based weather lookup with ~100ms response times, plus an interactive map layer for geographic visualization.
+- Calendar Itinerary System: monthly/agenda calendar views for date-based trip planning and organization.
+
+WRITING & CONTRIBUTIONS
+- Publish an AT Protocol developer skill ("atproto-pro") on skills.sh to help other engineers build on the protocol.
+- Write about the transition from the trades to software engineering and lessons learned building in production — on Medium and pckt.blog.
+
+EDUCATION & CERTIFICATIONS
+- Journeyman Electrician — Associated Builders and Contractors (ABC) (Indiana): completed electrical trade training through ABC, combining classroom instruction with on-the-job experience; earned journeyman status. Dues-paying IBEW member.
+- Self-directed Software Engineering Study (Ongoing): Python, FastAPI, PostgreSQL, distributed systems, REST API design, and AT Protocol — learned through building and shipping production software (VoxPort, doc-lok, Travel Wishlist) and through ongoing mentorship from senior engineers, including former Facebook and Microsoft engineers and a current Prisma platform architect.
