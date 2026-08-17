@@ -1,62 +1,57 @@
-Jared Lemler
-Pacifica, CA  ·  jared@jaredlemler.com  ·  jaredlemler.com  ·  github.com/JL037  ·  linkedin.com/in/jaredlemler
+JARED LEMLER
+Backend Engineer • Pacifica, CA
+jaredlemler.com  •  github.com/JL037  •  linkedin.com/in/jaredlemler
 
 PROFESSIONAL SUMMARY
-Backend Engineer with a craftsman's approach — 8 years in electrical systems, now building software that is safe, reliable, and maintainable. My electrician background honed my systems thinking: coordinating teams, reading complex plans, and building infrastructure that can't fail. I bring the same patience and troubleshooting discipline from wiring buildings to designing APIs, databases, and containerized services.
+Backend Engineer with a craftsman's approach and 8 years in electrical systems before software. My electrician background honed my systems thinking by coordinating teams, reading complex plans, and building infrastructure that can't fail, and I bring that same patience and troubleshooting discipline from wiring buildings to designing APIs, databases, and containerized services. Technically grounded in Python/FastAPI and TypeScript/Fastify, with production experience in PostgreSQL, Prisma, and Docker. Recently architected VoxPort, a federated podcast platform on the AT Protocol, building high-throughput data pipelines (1,000-event bounded in-memory queue, 100-event batched persistence, ~95% I/O reduction) under real-world constraints.
 
-Technically grounded in Python/FastAPI and TypeScript/Fastify, with production experience in PostgreSQL, Prisma, and Docker. Recently architected VoxPort, a federated podcast platform on the AT Protocol, building high-throughput data pipelines (1,000-event bounded in-memory queue, 100-event batched persistence, ~95% I/O reduction) under real-world constraints. I work with honest communication, clear ownership, and a passion for contributing to teams.
+FEATURED PROJECTS
 
-SKILLS
-- Languages: Python, JavaScript, TypeScript, SQL
-- Databases: PostgreSQL, Prisma Postgres, Neon, Alembic migrations, schema design, indexing, time-series aggregation
-- Data & ETL: Pandas, Pydantic validators, scheduled jobs (hourly/daily), batch processing, CSV ingestion, JSON pipelines
-- DevOps & Tooling: Docker, Alembic, Git, GitHub, JWT, pytest, Node.js, Sentry observability, OpenTelemetry tracing, structured logging, Axiom
-- Cloud & Infrastructure: AWS (EC2, Elastic Beanstalk, S3), CI/CD (CodeQL, Gitleaks, Bandit), Cloudflare R2 (content-addressed storage), Hetzner, Neon, Prisma Postgres, Fly.io
-- Frameworks / Libraries: FastAPI, Fastify, SQLAlchemy 2.0, Pydantic, Django, React, Prisma ORM
-- Core Competencies: REST API design, authentication & authorization, data modeling, distributed systems, AT Protocol, WebSocket, real-time event processing
+VoxPort (voxport.live) — Federated Podcast Platform • Fastify, Next.js, ATProto
+- Zero-Downtime Federation: Built a resilient WebSocket consumer surviving 10 reconnection cycles with exponential backoff and cooloff, featuring a bounded memory backpressure queue (1,000-event cap per worker) processing 6 collections with 100-event batching to achieve a ~95% I/O reduction vs. naive per-event persistence.
+- Engagement Analytics Engine: Designed and implemented an hourly velocity aggregation system tracking user engagement across 1h to 168h (7-day) windows using a custom weighted scoring algorithm (likes=1x, mentions=5x) for real-time trending content detection via scheduled background tasks.
+- Memory-Optimized Cursor Tracking: Eliminated per-event database write bottlenecks by introducing an in-memory cursor system with 5-second flush intervals, successfully reducing database round trips by ~95% during high-volume ingestion spikes.
+- Relational Data Architecture: Designed a fully normalized 26-entity database schema complete with dedicated time-series aggregation tables specifically optimized for historical trend analysis and real-time performance queries.
+- Scalable Media Infrastructure: Integrated Cloudflare R2 for content-addressed blob storage, seamlessly mapping Content Identifiers (CIDs) to AT Protocol records for verifiable, decentralized media distribution across federated network nodes.
+- Distributed Extraction Worker: Built a standalone Fly.io background worker claiming MediaJob records via FOR UPDATE SKIP LOCKED, featuring per-source-host politeness gating (1 concurrent job per host), exponential backoff retry policies, and graceful shutdown handling to keep heavy ffmpeg processing isolated from the API layer.
+- Zero-Trust Audio Security: Implemented magic-number file validation, automated ffmpeg metadata stripping, and 450MB upload limits to block spoofed payload uploads while strictly preserving creator privacy.
+
+doc-lok (github.com/JL037/doc-lok) — Pre-Prompt Context Condenser • TypeScript, Node.js, Zero-Dep
+- Context Window Optimization: Engineered a TypeScript pre-prompt middleware library that condenses prompt payloads by resolving remote Markdown links into compact cryptographic markers (<lok_id>), significantly cutting context token consumption and downstream API latency.
+- Conditional Caching Pipeline: Constructed a two-phase network verification engine using HTTP HEAD probes and If-None-Match ETag validation to completely bypass full payload downloads for unchanged remote documentation resources.
+- Zero-Dependency Architecture: Authored a lightweight CLI tool and standalone npm library relying exclusively on native Node.js APIs, completely eliminating third-party supply-chain vulnerabilities and minimizing cold-start overhead. Published on npm.
+
+Travel Wishlist (travelwishlist.app) — Location-Based Travel Planner • FastAPI, React, Docker, Postgres
+- Architecture & Design: Built a full-stack application leveraging FastAPI, PostgreSQL, and Docker. Designed robust JWT authentication workflows, Pydantic data validation schemas, and a reusable service-layer architecture for CRUD operations.
+- External API Integrations: Built a city-based weather lookup system integrating external weather APIs delivering ~100ms response times alongside interactive mapping layers for geographic destination visualization.
+- Calendar Itinerary System: Engineered monthly and agenda calendar views allowing date-based trip organization, destination bookmarking, and scheduled travel itineraries.
 
 PROFESSIONAL EXPERIENCE
 
-Backend Developer (Self-Employed) — Talk, Social Connection Platform (Netherlands)
-Jan 2025 – Feb 2026  ·  Pacifica, CA
-- Developed and deployed a privacy-compliant web app supporting 200+ university students using React, Vite, Tailwind, and a FastAPI backend.
-- Translated founder vision into technical implementation using Lovable prototypes, delivering full-stack solutions.
-- Built a QR-code trigger connecting physical and digital experiences for social experiments, enabling real-time participation and more efficient data collection.
-- Built automated data pipelines and dashboards converting raw activity into insights, reducing manual reporting effort by 90%.
-- Consulted with the team and users to streamline onboarding, increasing user retention in live trials.
-- Collaborated with founders to align analytics and engagement metrics with research and product direction.
-Technologies: TypeScript, React, Plausible Analytics, Tailwind, Vite, Cloudflare
+Backend Developer (Self-Employed) — Talk                                    Jan 2025 – Feb 2026
+Social Connection Platform • Netherlands / Pacifica, CA
+- Developed and deployed a privacy-compliant web platform supporting 200+ active university students using React, Vite, Tailwind CSS, and a custom FastAPI backend infrastructure.
+- Translated founder vision into rapid technical implementations by converting interactive Lovable prototypes into production-ready full-stack software solutions.
+- Engineered a custom QR-code trigger bridging physical events with digital experiences for social experiments, enabling real-time user participation and automated data collection.
+- Constructed automated data processing pipelines and visual analytics dashboards converting raw event metrics into actionable business insights, reducing manual reporting effort by 90%.
+- Consulted directly with product team members and beta testers to optimize user onboarding workflows, directly increasing user retention during live trial runs.
+- Collaborated closely with co-founders to align technical analytics and engagement telemetry with broader research goals and product strategies.
+Technologies: Python, FastAPI, TypeScript, React, Tailwind CSS, Vite, Cloudflare, Plausible Analytics
 
-Journeyman Electrician — Gaylor Electric · Wolverine Electric · IBEW
-2017 – 2025  ·  Indiana & Michigan
-- Coordinated crews of 2–4 electricians on commercial jobsites, reading and interpreting complex electrical and architectural plans to execute installations on schedule and to code.
-- Built and maintained electrical infrastructure with zero tolerance for failure — troubleshooting live systems under time pressure and safety constraints, the same discipline I now apply to APIs, databases, and containerized services.
-- Completed electrical training through Associated Builders and Contractors (ABC) trade school and earned journeyman status; remain a dues-paying IBEW member able to return to union dispatch.
+Journeyman Electrician — Gaylor Electric • Wolverine Electric • IBEW    2017 – 2025
+Indiana & Michigan
+- Coordinated site teams and crews of 2–4 electricians on high-visibility commercial jobsites, reading and interpreting complex electrical and architectural blueprints to deliver projects on schedule and strictly to code.
+- Built, maintained, and inspected critical electrical infrastructure under zero-tolerance failure standards, developing deep live-system troubleshooting capabilities under heavy time constraints and strict safety environments.
+- Completed comprehensive trade school coursework through Associated Builders and Contractors (ABC) to earn official Journeyman status; remain an active dues-paying IBEW union member eligible for dispatch.
 
-PROJECTS
-
-VoxPort (voxport.live) — Live podcast platform built on the AT Protocol
-- Live, shipped product: browser-based recording studio with AT Protocol OAuth sign-in, one-click publishing to Apple Podcasts & Spotify, and real-time social discovery features.
-- Zero-Downtime Federation: built a resilient WebSocket consumer surviving 10 reconnection cycles with exponential backoff, bounded memory backpressure (1,000-event cap per worker), and 100-event batching — ~95% I/O reduction vs. naive per-event persistence.
-- Distributed Extraction Worker: standalone Fly.io worker claiming jobs via FOR UPDATE SKIP LOCKED, per-source-host politeness gating, exponential backoff retry, and graceful shutdown — keeping ffmpeg and outbound fetches out of the request-serving API.
-- Scalable Media Infrastructure: integrated Cloudflare R2 for content-addressed blob storage, mapping CIDs to AT Protocol records for verifiable media distribution across federated nodes.
-- Relational Data Architecture: designed a 26-entity normalized schema with time-series aggregation tables for historical trend analysis and hourly engagement-velocity scoring.
-- Zero-Trust Audio Security: implemented magic-number file validation, ffmpeg metadata stripping, and upload size limits to block spoofed files while preserving creator privacy.
-
-doc-lok (github.com/JL037/doc-lok) — Zero-dependency npm package · TypeScript
-- Context Window Optimization: TypeScript pre-prompt middleware that condenses prompt payloads by resolving remote Markdown links into compact cryptographic markers, cutting context token consumption and API latency.
-- Conditional Caching Pipeline: two-phase network verification using HTTP HEAD probes and If-None-Match ETag validation to skip unchanged remote resources.
-- Zero-Dependency Architecture: CLI and library built exclusively on native Node.js APIs — no third-party supply-chain risk, minimal cold-start overhead. Published on npm.
-
-Travel Wishlist (travelwishlist.app) — Full-stack travel planner · FastAPI · React
-- Architecture & Design: built with FastAPI, PostgreSQL, and Docker; JWT authentication, Pydantic validation, and a reusable CRUD service layer.
-- Weather & Maps Integration: city-based weather lookup with ~100ms response times, plus an interactive map layer for geographic visualization.
-- Calendar Itinerary System: monthly/agenda calendar views for date-based trip planning and organization.
-
-WRITING & CONTRIBUTIONS
-- Publish an AT Protocol developer skill ("atproto-pro") on skills.sh to help other engineers build on the protocol.
-- Write about the transition from the trades to software engineering and lessons learned building in production — on Medium and pckt.blog.
+SKILLS & TECHNICAL COMPETENCIES
+Languages & Core Databases: Python, JavaScript, TypeScript, SQL | PostgreSQL, Prisma Postgres, Neon, Alembic, Schema Data Modeling, Index Optimization
+Frameworks & Cloud Infrastructure: FastAPI, Fastify, SQLAlchemy 2.0, Pydantic, Django, React, Prisma ORM | AWS (EC2, Elastic Beanstalk, S3), Cloudflare R2, Fly.io, Hetzner
+DevOps, Data Pipelines & Concepts: Docker, Git, GitHub, JWT, pytest, Sentry, OpenTelemetry, Axiom | Pandas, ETL Pipelines, Batch Processing | REST API Design, Distributed Systems, AT Protocol, WebSockets
 
 EDUCATION & CERTIFICATIONS
-- Journeyman Electrician — Associated Builders and Contractors (ABC) (Indiana): completed electrical trade training through ABC, combining classroom instruction with on-the-job experience; earned journeyman status. Dues-paying IBEW member.
-- Self-directed Software Engineering Study (Ongoing): Python, FastAPI, PostgreSQL, distributed systems, REST API design, and AT Protocol — learned through building and shipping production software (VoxPort, doc-lok, Travel Wishlist) and through ongoing mentorship from senior engineers, including former Facebook and Microsoft engineers and a current Prisma platform architect.
+Journeyman Electrician Certification: Associated Builders and Contractors (ABC) Indiana • Completed multi-year vocational trade training combining rigorous technical classroom instruction with on-the-job industrial experience to achieve full Journeyman status. Active dues-paying IBEW member.
+Self-Directed Software Engineering Discipline: Advanced ongoing practical study of Python, FastAPI, Fastify, Next.js, TypeScript, PostgreSQL, distributed systems, the AT Protocol, and beginning Rust. Built through shipping live production software systems (VoxPort, doc-lok, Travel Wishlist) and 1:1 mentorship from senior engineers including former Facebook and Microsoft engineers and a current Prisma platform architect.
+
+WRITING & COMMUNITY
+Published an AT Protocol developer skill ("atproto-pro") on skills.sh; write on pckt.blog about building on the AT Protocol, including a deep dive on AT Protocol & RSS feed integration (https://jared-tries-to-blog.pckt.blog/at-protocol-rss-2n59bg2).
