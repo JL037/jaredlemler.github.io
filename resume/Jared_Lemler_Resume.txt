@@ -11,7 +11,7 @@ Founder & Lead Engineer | Remote
 Technologies: Fastify, Next.js, ATProto, Prisma Postgres, Cloudflare R2, Fly.io, Vercel
 - Shipped a federated podcast platform: Built end-to-end on the Bluesky ATProto ecosystem — creator studio, public listener pages, OAuth identity, R2 media pipeline, and Fly.io/Vercel deployment — serving live creators and listeners.
 - Built a firehose ingestion pipeline: Filtered a 2,000+ events/sec Bluesky firehose to relevant-only events by configuring server-side collection filtering, dropping roughly 96% at the source across 7 collection types.
-- Database Operations Optimization: Cut production DB operations 96% (~209k to ~3-8k ops/day) by adding in-memory caching, extending cursor flush intervals, and batching transaction writes, eliminating ~60k table scans/day. This helped reduce DB expenses.
+- Database Operations Optimization: Cut production DB operations 96% (~209k to ~3-8k ops/day) by adding in-memory caching, extending cursor flush intervals, and batching transaction writes, eliminating ~60k table scans/day. Used an LLM agent to audit Axiom logs to identify and remediate unoptimized queries, further improving performance.
 - Resolved an OAuth outage: Restored PDS sign-in with 18x latency improvement by routing client-metadata.json through Cloudflare proxying, isolating Vercel IP routing as root cause via cross-network probes.
 - Hardened RSS import pipeline: Secured our RSS import pipeline against SSRF and file-upload attacks by implementing magic-number validation, ffmpeg metadata stripping, and RFC-1918 blocking.
 - Eliminated external DAW dependency: Built a browser-native recording booth with off-main-thread MP3 encoding and IndexedDB crash recovery, enabling non-destructive episode editing entirely in-browser.
