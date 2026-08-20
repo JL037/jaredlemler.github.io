@@ -1,57 +1,58 @@
 JARED LEMLER
-Backend Engineer • Pacifica, CA
-jaredlemler.com  •  github.com/JL037  •  linkedin.com/in/jaredlemler
+Backend Engineer • Pacifica, CA • jared@jaredlemler.com • github.com/JL037 • linkedin.com/in/jaredlemler • bsky.app/profile/jaredlemler.com
 
-PROFESSIONAL SUMMARY
-Backend Engineer with a craftsman's approach and 8 years in electrical systems before software. My electrician background honed my systems thinking by coordinating teams, reading complex plans, and building infrastructure that can't fail, and I bring that same patience and troubleshooting discipline from wiring buildings to designing APIs, databases, and containerized services. Technically grounded in Python/FastAPI and TypeScript/Fastify, with production experience in PostgreSQL, Prisma, and Docker. Recently architected VoxPort, a federated podcast platform on the AT Protocol, building high-throughput data pipelines (1,000-event bounded in-memory queue, 100-event batched persistence, ~95% I/O reduction) under real-world constraints.
-
-FEATURED PROJECTS
-
-VoxPort (voxport.live) — Federated Podcast Platform • Fastify, Next.js, ATProto
-- Zero-Downtime Federation: Built a resilient WebSocket consumer surviving 10 reconnection cycles with exponential backoff and cooloff, featuring a bounded memory backpressure queue (1,000-event cap per worker) processing 6 collections with 100-event batching to achieve a ~95% I/O reduction vs. naive per-event persistence.
-- Engagement Analytics Engine: Designed and implemented an hourly velocity aggregation system tracking user engagement across 1h to 168h (7-day) windows using a custom weighted scoring algorithm (likes=1x, mentions=5x) for real-time trending content detection via scheduled background tasks.
-- Memory-Optimized Cursor Tracking: Eliminated per-event database write bottlenecks by introducing an in-memory cursor system with 5-second flush intervals, successfully reducing database round trips by ~95% during high-volume ingestion spikes.
-- Relational Data Architecture: Designed a fully normalized 26-entity database schema complete with dedicated time-series aggregation tables specifically optimized for historical trend analysis and real-time performance queries.
-- Scalable Media Infrastructure: Integrated Cloudflare R2 for content-addressed blob storage, seamlessly mapping Content Identifiers (CIDs) to AT Protocol records for verifiable, decentralized media distribution across federated network nodes.
-- Distributed Extraction Worker: Built a standalone Fly.io background worker claiming MediaJob records via FOR UPDATE SKIP LOCKED, featuring per-source-host politeness gating (1 concurrent job per host), exponential backoff retry policies, and graceful shutdown handling to keep heavy ffmpeg processing isolated from the API layer.
-- Zero-Trust Audio Security: Implemented magic-number file validation, automated ffmpeg metadata stripping, and 450MB upload limits to block spoofed payload uploads while strictly preserving creator privacy.
-
-doc-lok (github.com/JL037/doc-lok) — Pre-Prompt Context Condenser • TypeScript, Node.js, Zero-Dep
-- Context Window Optimization: Engineered a TypeScript pre-prompt middleware library that condenses prompt payloads by resolving remote Markdown links into compact cryptographic markers (<lok_id>), significantly cutting context token consumption and downstream API latency.
-- Conditional Caching Pipeline: Constructed a two-phase network verification engine using HTTP HEAD probes and If-None-Match ETag validation to completely bypass full payload downloads for unchanged remote documentation resources.
-- Zero-Dependency Architecture: Authored a lightweight CLI tool and standalone npm library relying exclusively on native Node.js APIs, completely eliminating third-party supply-chain vulnerabilities and minimizing cold-start overhead. Published on npm.
-
-Travel Wishlist (travelwishlist.app) — Location-Based Travel Planner • FastAPI, React, Docker, Postgres
-- Architecture & Design: Built a full-stack application leveraging FastAPI, PostgreSQL, and Docker. Designed robust JWT authentication workflows, Pydantic data validation schemas, and a reusable service-layer architecture for CRUD operations.
-- External API Integrations: Built a city-based weather lookup system integrating external weather APIs delivering ~100ms response times alongside interactive mapping layers for geographic destination visualization.
-- Calendar Itinerary System: Engineered monthly and agenda calendar views allowing date-based trip organization, destination bookmarking, and scheduled travel itineraries.
+SUMMARY
+Backend Engineer building high-throughput, low-latency systems in Python/FastAPI and TypeScript, with a production data pipeline processing 200k+ daily operations at 96% reduced overhead. Driving development velocity through agentic workflows that optimize sprint planning, context harnessing, and automated testing. Brings 8 years of industrial electrical infrastructure experience into software engineering: a fail-safe mindset and rigorous systems thinking carried over from zero-tolerance-failure environments into resilient API and pipeline design.
 
 PROFESSIONAL EXPERIENCE
 
-Backend Developer (Self-Employed) — Talk                                    Jan 2025 – Feb 2026
-Social Connection Platform • Netherlands / Pacifica, CA
-- Developed and deployed a privacy-compliant web platform supporting 200+ active university students using React, Vite, Tailwind CSS, and a custom FastAPI backend infrastructure.
-- Translated founder vision into rapid technical implementations by converting interactive Lovable prototypes into production-ready full-stack software solutions.
-- Engineered a custom QR-code trigger bridging physical events with digital experiences for social experiments, enabling real-time user participation and automated data collection.
-- Constructed automated data processing pipelines and visual analytics dashboards converting raw event metrics into actionable business insights, reducing manual reporting effort by 90%.
-- Consulted directly with product team members and beta testers to optimize user onboarding workflows, directly increasing user retention during live trial runs.
-- Collaborated closely with co-founders to align technical analytics and engagement telemetry with broader research goals and product strategies.
-Technologies: Python, FastAPI, TypeScript, React, Tailwind CSS, Vite, Cloudflare, Plausible Analytics
+VoxPort (voxport.live) — Federated Podcast Platform                Oct 2025 – Present
+Founder & Lead Engineer | Remote
+Technologies: Fastify, Next.js, ATProto, Prisma Postgres, Cloudflare R2, Fly.io, Vercel
+- Shipped a federated podcast platform: Built end-to-end on the Bluesky ATProto ecosystem — creator studio, public listener pages, OAuth identity, R2 media pipeline, and Fly.io/Vercel deployment — serving live creators and listeners.
+- Built a firehose ingestion pipeline: Filtered a 2,000+ events/sec Bluesky firehose to relevant-only events by configuring server-side collection filtering, dropping roughly 96% at the source across 7 collection types.
+- Database Operations Optimization: Cut production DB operations 96% (~209k to ~3-8k ops/day) by adding in-memory caching, extending cursor flush intervals, and batching transaction writes, eliminating ~60k table scans/day. This helped reduce DB expenses.
+- Resolved an OAuth outage: Restored PDS sign-in with 18x latency improvement by routing client-metadata.json through Cloudflare proxying, isolating Vercel IP routing as root cause via cross-network probes.
+- Hardened RSS import pipeline: Secured our RSS import pipeline against SSRF and file-upload attacks by implementing magic-number validation, ffmpeg metadata stripping, and RFC-1918 blocking.
+- Eliminated external DAW dependency: Built a browser-native recording booth with off-main-thread MP3 encoding and IndexedDB crash recovery, enabling non-destructive episode editing entirely in-browser.
+- Accelerated development velocity: Integrated context harnessing and agentic onboarding workflows using open-weights models to automate sprint planning, issue tracking (via MCP/Linear/Notion), and test generation, significantly reducing manual overhead.
 
-Journeyman Electrician — Gaylor Electric • Wolverine Electric • IBEW    2017 – 2025
+Backend Developer (On Contract) — Talk                              Jan 2025 – Feb 2026
+Social Connection Platform • Remote
+Technologies: Python, FastAPI, TypeScript, React, Tailwind CSS, Vite, Cloudflare, Plausible Analytics
+- Reduced manual reporting effort by 90%: Created automated data processing pipelines and visual analytics dashboards converting raw event metrics into business insights.
+- Served 200+ active university students: Developed and deployed a privacy-compliant web platform using React, Vite, Tailwind CSS, and a custom FastAPI backend infrastructure.
+- Accelerated time-to-market: Translated founder vision into production-ready software by rapidly converting interactive prototypes (Lovable) into full-stack solutions.
+- Increased user engagement: Designed a custom QR-code trigger bridging physical events with digital experiences alongside optimized user onboarding workflows.
+
+Journeyman Electrician — Gaylor Electric • Wolverine Electric • IBEW  2017 – 2025
 Indiana & Michigan
-- Coordinated site teams and crews of 2–4 electricians on high-visibility commercial jobsites, reading and interpreting complex electrical and architectural blueprints to deliver projects on schedule and strictly to code.
-- Built, maintained, and inspected critical electrical infrastructure under zero-tolerance failure standards, developing deep live-system troubleshooting capabilities under heavy time constraints and strict safety environments.
-- Completed comprehensive trade school coursework through Associated Builders and Contractors (ABC) to earn official Journeyman status; remain an active dues-paying IBEW union member eligible for dispatch.
+- Led crews of 2–4 electricians on high-visibility commercial jobsites, reading complex architectural blueprints to deliver projects on schedule and to strict code standards.
+- Built and inspected critical electrical infrastructure under zero-tolerance failure environments, developing deep live-system troubleshooting capabilities.
+- Earned official Journeyman status through Associated Builders and Contractors (ABC); active dues-paying IBEW union member.
+
+FEATURED PROJECTS
+
+doc-lok (github.com/JL037/doc-lok) — Pre-Prompt Context Condenser
+TypeScript, Node.js, Zero-Dep
+- Optimized LLM context windows: Authored a TypeScript middleware library resolving remote Markdown links into compact cryptographic markers to cut token consumption and latency. Published on npm.
+- Bypassed redundant downloads: Constructed a two-phase verification engine using HTTP HEAD probes and ETag validation to cache remote docs efficiently.
+- Eliminated third-party vulnerabilities: Developed a lightweight CLI tool and npm library relying strictly on native Node.js APIs.
+
+Travel Wishlist (travelwishlist.app) — Location-Based Travel Planner
+FastAPI, React, Docker, Postgres
+- Delivered ~100ms response times: Built a city-based weather lookup system integrating external weather APIs with interactive mapping layers using FastAPI, PostgreSQL, and Docker.
+- Full-Stack Architecture: Engineered JWT authentication workflows, Pydantic data validation schemas, and agenda calendar itinerary views.
 
 SKILLS & TECHNICAL COMPETENCIES
-Languages & Core Databases: Python, JavaScript, TypeScript, SQL | PostgreSQL, Prisma Postgres, Neon, Alembic, Schema Data Modeling, Index Optimization
-Frameworks & Cloud Infrastructure: FastAPI, Fastify, SQLAlchemy 2.0, Pydantic, Django, React, Prisma ORM | AWS (EC2, Elastic Beanstalk, S3), Cloudflare R2, Fly.io, Hetzner
-DevOps, Data Pipelines & Concepts: Docker, Git, GitHub, JWT, pytest, Sentry, OpenTelemetry, Axiom | Pandas, ETL Pipelines, Batch Processing | REST API Design, Distributed Systems, AT Protocol, WebSockets
+Languages & Core DBs: Python, JavaScript, TypeScript, SQL | PostgreSQL, Prisma Postgres, Neon, Alembic, Schema Data Modeling, Index Optimization
+Frameworks & Infra: FastAPI, Fastify, Next.js, Node.js, SQLAlchemy 2.0, Pydantic, Django, React, Prisma ORM | AWS (EC2, Elastic Beanstalk, S3), Cloudflare R2, Fly.io, Hetzner
+DevOps & Concepts: Docker, Git, GitHub, JWT, pytest, Sentry, OpenTelemetry, Axiom | Pandas, ETL Pipelines, Batch Processing | REST API Design, Distributed Systems, AT Protocol, WebSockets
+AI Engineering: Agentic Workflows, Context Harnessing, Open-Weights Model Integration, Prompt Engineering, Test Harness Development
 
 EDUCATION & CERTIFICATIONS
-Journeyman Electrician Certification: Associated Builders and Contractors (ABC) Indiana • Completed multi-year vocational trade training combining rigorous technical classroom instruction with on-the-job industrial experience to achieve full Journeyman status. Active dues-paying IBEW member.
-Self-Directed Software Engineering Discipline: Advanced ongoing practical study of Python, FastAPI, Fastify, Next.js, TypeScript, PostgreSQL, distributed systems, the AT Protocol, and beginning Rust. Built through shipping live production software systems (VoxPort, doc-lok, Travel Wishlist) and 1:1 mentorship from senior engineers including former Facebook and Microsoft engineers and a current Prisma platform architect.
+- Journeyman Electrician: Associated Builders and Contractors (ABC) Indiana • Completed multi-year vocational trade training combining technical classroom instruction with on-the-job industrial experience. Active dues-paying IBEW member.
+- Independent Study: Ongoing practical study of Python, FastAPI, Fastify, Next.js, TypeScript, PostgreSQL, distributed systems, and the AT Protocol. Backed by 1:1 mentorship from senior engineers (former Facebook, Microsoft, and Prisma engineers).
 
 WRITING & COMMUNITY
-Published an AT Protocol developer skill ("atproto-pro") on skills.sh; write on pckt.blog about building on the AT Protocol, including a deep dive on AT Protocol & RSS feed integration (https://jared-tries-to-blog.pckt.blog/at-protocol-rss-2n59bg2).
+Published an AT Protocol developer skill ("atproto-pro") on https://www.skills.sh/jl037/atproto-pro/atproto-pro; written on https://pckt.blog/b/jared-tries-to-blog about building on the AT Protocol and RSS feed integration.
