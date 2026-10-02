@@ -1,0 +1,14 @@
+{
+  "name": "jaredlemler.com",
+  "private": true,
+  "type": "module",
+  "description": "Static personal site for jaredlemler.com, served by GitHub Pages.",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "writing": "node scripts/update-writing.mjs",
+    "check": "node scripts/check-site.mjs",
+    "build": "npm run writing && npm run check"
+  }
+}

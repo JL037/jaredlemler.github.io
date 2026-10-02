@@ -1,0 +1,60 @@
+name: Site
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  schedule:
+    # Mondays 15:00 UTC (8am Pacific): pull new pckt.blog posts.
+    - cron: "0 15 * * 1"
+  workflow_dispatch:
+
+concurrency:
+  group: site-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  check:
+    if: github.event_name == 'push' || github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - run: npm run check
+
+  refresh-writing:
+    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pages: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      # A failed fetch leaves the committed list in place and only warns.
+      - run: npm run writing
+      - run: npm run check
+
+      - name: Commit and redeploy if posts changed
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if git diff --quiet; then
+            echo "Writing list already current."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -am "Refresh writing feed from pckt.blog"
+          git push origin HEAD:main
+          # Pushes made with GITHUB_TOKEN may not start a Pages build on their own.
+          gh api -X POST "repos/${GITHUB_REPOSITORY}/pages/builds" --silent
