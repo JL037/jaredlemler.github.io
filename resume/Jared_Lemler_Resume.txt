@@ -18,7 +18,7 @@ Technologies: Fastify, Next.js, ATProto, Prisma Postgres, Cloudflare R2, Fly.io,
 - Accelerated development velocity: Integrated context harnessing and agentic onboarding workflows using open-weights models to automate sprint planning, issue tracking (via MCP/Linear/Notion), and test generation, significantly reducing manual overhead.
 
 Backend Engineer (Contract), Talk                              Jan 2025 – Feb 2026
-Social Connection Platform • Remote
+Social Connection Platform • Remote • Held alongside electrical work
 Technologies: Python, FastAPI, TypeScript, React, Tailwind CSS, Vite, Cloudflare, Plausible Analytics
 - Reduced manual reporting effort by 90%: Created automated data processing pipelines and visual analytics dashboards converting raw event metrics into business insights.
 - Served 200+ active university students: Developed and deployed a privacy-compliant web platform using React, Vite, Tailwind CSS, and a custom FastAPI backend infrastructure.
@@ -43,6 +43,11 @@ Travel Wishlist (travelwishlist.app): Location-Based Travel Planner
 FastAPI, React, Docker, Postgres
 - Delivered ~100ms response times: Built a city-based weather lookup system integrating external weather APIs with interactive mapping layers using FastAPI, PostgreSQL, and Docker.
 - Full-Stack Architecture: Engineered JWT authentication workflows, Pydantic data validation schemas, and agenda calendar itinerary views.
+
+seamux (github.com/thecodedrift/seamux): Open Source Contributor
+Open-source, multi-agent session dashboard for Claude Code and Codex in cmux
+- Scoped OpenCode support: Proposed OpenCode as a supported engine (issue #4) and, at the maintainer's request, split unhooked terminal sessions into issue #5.
+- Measured the integration first: Opened PR #8 (in review), documenting how cmux registers and tracks OpenCode sessions and what the engine needs to drive them reliably.
 
 SKILLS & TECHNICAL COMPETENCIES
 Languages & Core DBs: Python, JavaScript, TypeScript, SQL | PostgreSQL, Prisma Postgres, Neon, Alembic, Schema Data Modeling, Index Optimization
