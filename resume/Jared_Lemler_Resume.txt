@@ -1,23 +1,23 @@
 JARED LEMLER
-Backend Engineer • Pacifica, CA • jared@jaredlemler.com • github.com/JL037 • linkedin.com/in/jaredlemler • bsky.app/profile/jaredlemler.com
+Backend Engineer • Pacifica, CA (SF Bay Area) • jared@jaredlemler.com • github.com/JL037 • linkedin.com/in/jaredlemler • bsky.app/profile/jaredlemler.com
 
 SUMMARY
-Backend Engineer building high-throughput, low-latency systems in Python/FastAPI and TypeScript, with a production data pipeline processing 200k+ daily operations at 96% reduced overhead. Driving development velocity through agentic workflows that optimize sprint planning, context harnessing, and automated testing. Brings 8 years of industrial electrical infrastructure experience into software engineering: a fail-safe mindset and rigorous systems thinking carried over from zero-tolerance-failure environments into resilient API and pipeline design.
+Backend Engineer building high-throughput, low-latency systems in Python/FastAPI and TypeScript/Fastify. Cut production DB operations on a live data pipeline 96%, from ~209K to ~3K to 8K per day. Driving development velocity through agentic workflows that optimize sprint planning, context harnessing, and automated testing. Brings 8 years of industrial electrical infrastructure experience into software engineering: a fail-safe mindset and rigorous systems thinking carried over from zero-tolerance-failure environments into resilient API and pipeline design.
 
 PROFESSIONAL EXPERIENCE
 
-VoxPort (voxport.live) — Federated Podcast Platform                Oct 2025 – Present
+VoxPort (voxport.live): Federated Podcast Platform                Oct 2025 – Present
 Founder & Lead Engineer | Remote
 Technologies: Fastify, Next.js, ATProto, Prisma Postgres, Cloudflare R2, Fly.io, Vercel
-- Shipped a federated podcast platform: Built end-to-end on the Bluesky ATProto ecosystem — creator studio, public listener pages, OAuth identity, R2 media pipeline, and Fly.io/Vercel deployment — serving live creators and listeners.
+- Shipped a federated podcast platform: Built end-to-end on the Bluesky ATProto ecosystem (creator studio, public listener pages, OAuth identity, R2 media pipeline, and Fly.io/Vercel deployment), serving live creators and listeners.
 - Built a firehose ingestion pipeline: Filtered a 2,000+ events/sec Bluesky firehose to relevant-only events by configuring server-side collection filtering, dropping roughly 96% at the source across 7 collection types.
-- Database Operations Optimization: Cut production DB operations 96% (~209k to ~3-8k ops/day) by adding in-memory caching, extending cursor flush intervals, and batching transaction writes, eliminating ~60k table scans/day. Used an LLM agent to audit Axiom logs to identify and remediate unoptimized queries, further improving performance.
-- Resolved an OAuth outage: Restored PDS sign-in with 18x latency improvement by routing client-metadata.json through Cloudflare proxying, isolating Vercel IP routing as root cause via cross-network probes.
+- Database Operations Optimization: Cut production DB operations 96%, from ~209K to ~3K to 8K per day, by adding in-memory caching, extending cursor flush intervals, and batching transaction writes, eliminating ~60k table scans/day. Used an LLM agent to audit Axiom logs to identify and remediate unoptimized queries, further improving performance.
+- Resolved an OAuth outage: Restored PDS sign-in from complete failure by routing client-metadata.json through Cloudflare proxying, isolating Vercel IP routing as root cause via cross-network probes.
 - Hardened RSS import pipeline: Secured our RSS import pipeline against SSRF and file-upload attacks by implementing magic-number validation, ffmpeg metadata stripping, and RFC-1918 blocking.
 - Eliminated external DAW dependency: Built a browser-native recording booth with off-main-thread MP3 encoding and IndexedDB crash recovery, enabling non-destructive episode editing entirely in-browser.
 - Accelerated development velocity: Integrated context harnessing and agentic onboarding workflows using open-weights models to automate sprint planning, issue tracking (via MCP/Linear/Notion), and test generation, significantly reducing manual overhead.
 
-Backend Developer (On Contract) — Talk                              Jan 2025 – Feb 2026
+Backend Engineer (Contract), Talk                              Jan 2025 – Feb 2026
 Social Connection Platform • Remote
 Technologies: Python, FastAPI, TypeScript, React, Tailwind CSS, Vite, Cloudflare, Plausible Analytics
 - Reduced manual reporting effort by 90%: Created automated data processing pipelines and visual analytics dashboards converting raw event metrics into business insights.
@@ -25,7 +25,7 @@ Technologies: Python, FastAPI, TypeScript, React, Tailwind CSS, Vite, Cloudflare
 - Accelerated time-to-market: Translated founder vision into production-ready software by rapidly converting interactive prototypes (Lovable) into full-stack solutions.
 - Increased user engagement: Designed a custom QR-code trigger bridging physical events with digital experiences alongside optimized user onboarding workflows.
 
-Journeyman Electrician — Gaylor Electric • Wolverine Electric • IBEW  2017 – 2025
+Journeyman Electrician, Gaylor Electric • Wolverine Electric • IBEW  2017 – 2025
 Indiana & Michigan
 - Led crews of 2–4 electricians on high-visibility commercial jobsites, reading complex architectural blueprints to deliver projects on schedule and to strict code standards.
 - Built and inspected critical electrical infrastructure under zero-tolerance failure environments, developing deep live-system troubleshooting capabilities.
@@ -33,13 +33,13 @@ Indiana & Michigan
 
 FEATURED PROJECTS
 
-doc-lok (github.com/JL037/doc-lok) — Pre-Prompt Context Condenser
+doc-lok (github.com/JL037/doc-lok): Pre-Prompt Context Condenser
 TypeScript, Node.js, Zero-Dep
 - Optimized LLM context windows: Authored a TypeScript middleware library resolving remote Markdown links into compact cryptographic markers to cut token consumption and latency. Published on npm.
 - Bypassed redundant downloads: Constructed a two-phase verification engine using HTTP HEAD probes and ETag validation to cache remote docs efficiently.
 - Eliminated third-party vulnerabilities: Developed a lightweight CLI tool and npm library relying strictly on native Node.js APIs.
 
-Travel Wishlist (travelwishlist.app) — Location-Based Travel Planner
+Travel Wishlist (travelwishlist.app): Location-Based Travel Planner
 FastAPI, React, Docker, Postgres
 - Delivered ~100ms response times: Built a city-based weather lookup system integrating external weather APIs with interactive mapping layers using FastAPI, PostgreSQL, and Docker.
 - Full-Stack Architecture: Engineered JWT authentication workflows, Pydantic data validation schemas, and agenda calendar itinerary views.

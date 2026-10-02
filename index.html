@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta
     name="description"
-    content="From electrician to backend engineer. I build practical systems with Python, FastAPI, Postgres, and Docker to solve real problems — federated platforms, data pipelines, and developer tooling."
+    content="From electrician to backend engineer. I build practical systems with Python/FastAPI, TypeScript/Fastify, and Postgres: federated platforms, data pipelines, and developer tooling."
   />
 
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -15,13 +15,14 @@
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Jared Lemler" />
   <meta property="og:title" content="Jared Lemler – Backend Engineer & Builder" />
-  <meta property="og:description" content="From electrician to backend engineer — building federated platforms, data pipelines, and developer tooling with Python, FastAPI, Postgres, TypeScript, and React." />
+  <meta property="og:description" content="From electrician to backend engineer. Building federated platforms, data pipelines, and developer tooling with Python/FastAPI, TypeScript/Fastify, and Postgres." />
   <meta property="og:url" content="https://jaredlemler.com/" />
   <meta property="og:image" content="https://jaredlemler.com/og/home.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
 
   <link rel="alternate" type="application/rss+xml" title="Jared's Blog" href="/feed.xml" />
 
+  <!-- TODO(jared): https://x.com/JaredLemler was removed from sameAs because it is not linked anywhere on the site. Re-add it here if you want it listed. -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -29,12 +30,34 @@
     "name": "Jared Lemler",
     "url": "https://jaredlemler.com/",
     "image": "https://jaredlemler.com/og/home.jpg",
-    "jobTitle": "Backend Developer",
+    "jobTitle": "Backend Engineer",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Pacifica",
+      "addressRegion": "CA",
+      "addressCountry": "US"
+    },
+    "knowsAbout": [
+      "AT Protocol",
+      "PostgreSQL",
+      "FastAPI",
+      "Fastify",
+      "TypeScript",
+      "Python",
+      "Distributed systems"
+    ],
+    "worksFor": {
+      "@type": "Organization",
+      "name": "VoxPort",
+      "url": "https://voxport.live"
+    },
     "sameAs": [
       "https://github.com/JL037",
       "https://linkedin.com/in/jaredlemler",
-      "https://x.com/JaredLemler",
-      "https://bsky.app/profile/jaredlemler.com"
+      "https://bsky.app/profile/jaredlemler.com",
+      "https://pckt.blog/@did:plc:tsjjh5uzepibeoujgscgfgo4",
+      "https://www.npmjs.com/package/doc-lok",
+      "https://www.skills.sh/jl037"
     ]
   }
   </script>
@@ -48,7 +71,7 @@
     <header class="border-b border-slate-800/80 bg-slate-950/80 backdrop-blur sticky top-0 z-20">
       <div class="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between">
         <a href="#top" class="font-semibold tracking-tight text-slate-100">
-          jared<span class="text-emerald-400">.dev</span>
+          Jared Lemler
         </a>
         <nav class="hidden sm:flex gap-6 text-sm text-slate-300">
           <a href="#about" class="hover:text-emerald-400 transition">About</a>
@@ -94,9 +117,8 @@
             </h1>
             <p class="text-base md:text-lg text-slate-300 mb-6">
               I'm <span class="font-medium text-slate-100">Jared Lemler</span>, a backend engineer and former
-              electrician. I build practical systems with
-              <span class="font-medium text-emerald-300">Python, FastAPI, Postgres, and Docker</span>
-              — federated platforms, data pipelines, and developer tooling that solve real problems.
+              electrician. I build federated platforms, data pipelines, and developer tooling with
+              <span class="font-medium text-emerald-300">Python/FastAPI and TypeScript/Fastify on Postgres</span>.
             </p>
             <p class="text-sm text-slate-400 mb-8">
               Calm under pressure, obsessed with craftsmanship, and always looking for clearer, more honest systems.
@@ -134,34 +156,38 @@
               />
               <!-- Currently card -->
               <div class="rounded-2xl border border-slate-800 bg-slate-900/60 p-5 shadow-lg shadow-black/40">
-                <p class="text-xs font-mono uppercase tracking-[0.2em] text-emerald-400 mb-3">
-                  Currently
-                </p>
+                <div class="flex items-baseline justify-between gap-3 mb-3">
+                  <p class="text-xs font-mono uppercase tracking-[0.2em] text-emerald-400">
+                    Currently
+                  </p>
+                  <p class="text-xs text-slate-400">Updated October 2026</p>
+                </div>
                 <ul class="space-y-3 text-sm text-slate-200">
                   <li class="flex items-start gap-2">
                     <span class="mt-1 h-1.5 w-1.5 rounded-full bg-emerald-400 shrink-0"></span>
                     <div>
-                      <p class="font-medium">Building VoxPort Studio</p>
+                      <p class="font-medium">Building VoxPort</p>
                       <p class="text-slate-400">
-                        Federated podcast platform on the AT Protocol — extraction worker, multi-env deploy, observability stack.
+                        Federated podcast platform on the AT Protocol. Live at <a href="https://voxport.live" target="_blank" rel="noreferrer" class="text-emerald-400 hover:text-emerald-300 underline underline-offset-2">voxport.live</a>.
                       </p>
                     </div>
                   </li>
                   <li class="flex items-start gap-2">
                     <span class="mt-1 h-1.5 w-1.5 rounded-full bg-emerald-400 shrink-0"></span>
                     <div>
-                      <p class="font-medium">Shipping doc-lok</p>
+                      <p class="font-medium">Contributing to seamux</p>
                       <p class="text-slate-400">
-                        Zero-dependency npm package for condensing LLM context windows.
+                        Open-source, multi-agent session dashboard for Claude Code and Codex in cmux. I opened <a href="https://github.com/thecodedrift/seamux/issues/4" target="_blank" rel="noreferrer" class="text-emerald-400 hover:text-emerald-300 underline underline-offset-2">issue #4</a>, "Launch any harness, starting with OpenCode and Devin CLI."
+                        <!-- TODO(jared): add specific merged seamux PRs/features once confirmed. -->
                       </p>
                     </div>
                   </li>
                   <li class="flex items-start gap-2">
                     <span class="mt-1 h-1.5 w-1.5 rounded-full bg-emerald-400 shrink-0"></span>
                     <div>
-                      <p class="font-medium">Learning</p>
+                      <p class="font-medium">Open to backend roles</p>
                       <p class="text-slate-400">
-                        Podcasting domain internals, distributed systems, and AI-native dev workflows.
+                        Remote or SF Bay Area.
                       </p>
                     </div>
                   </li>
@@ -195,7 +221,7 @@
               </p>
               <p class="text-sm md:text-base text-slate-200 leading-relaxed">
                 I pick up new domains fast. Podcasting pulled me in, and I taught myself how a platform actually
-                works — RSS distribution, hosting economics, the AT Protocol as an identity and record layer —
+                works (RSS distribution, hosting economics, the AT Protocol as an identity and record layer)
                 well enough to architect one. <span class="font-medium text-emerald-300">That's the pattern: get curious, learn the domain honestly, then build.</span>
               </p>
             </div>
@@ -218,7 +244,7 @@
             <div class="rounded-2xl border border-slate-800 bg-slate-900/60 p-4">
               <h3 class="text-xs font-mono uppercase tracking-[0.2em] text-emerald-400 mb-2">Outside of code</h3>
               <p class="text-slate-300">
-                I live in the San Francisco Bay Area with my wife and our dogs. Outside of work you'll usually find me
+                I live in Pacifica, CA (SF Bay Area) with my wife and our dogs. Outside of work you'll usually find me
                 gaming, hiking and exploring areas I haven't been, and going down rabbit holes of topics that are
                 interesting and new to me.
               </p>
@@ -275,7 +301,7 @@
                 <li>Breaks work into clear steps</li>
                 <li>Calm, honest communication</li>
                 <li>Strong bias toward learning</li>
-                <li><span class="font-medium text-slate-100">Docs as a progress compass:</span> has agents maintain clean, detailed markdown — status, worklogs, plans — so project state is always legible to humans and the next agent.</li>
+                <li><span class="font-medium text-slate-100">Docs as a progress compass:</span> has agents maintain clean, detailed markdown (status, worklogs, plans) so project state is always legible to humans and the next agent.</li>
                 <li><span class="font-medium text-slate-100">AI-native workflow:</span> treats agents as collaborators with structured handoffs, not magic buttons.</li>
                 <li><span class="font-medium text-slate-100">Learning out loud:</span> writes to understand, not just to publish.</li>
               </ul>
@@ -315,7 +341,7 @@
               <ul class="space-y-2 text-sm text-slate-300 mb-3">
                 <li class="flex items-start gap-2">
                   <span class="mt-1.5 h-1.5 w-1.5 rounded-full bg-emerald-400 shrink-0"></span>
-                  <span><span class="font-medium text-slate-100">Federated ingestion at scale:</span> resilient WebSocket consumer with bounded memory backpressure (1,000-event cap) and 100-event batching — ~95% I/O reduction vs. per-event persistence.</span>
+                  <span><span class="font-medium text-slate-100">Federated ingestion at scale:</span> resilient WebSocket consumer with bounded memory backpressure (1,000-event cap) and 100-event batching. Together with in-memory caching and longer cursor flush intervals, this cut production DB operations 96%, from ~209K to ~3K to 8K per day.</span>
                 </li>
                 <li class="flex items-start gap-2">
                   <span class="mt-1.5 h-1.5 w-1.5 rounded-full bg-emerald-400 shrink-0"></span>
@@ -323,7 +349,7 @@
                 </li>
                 <li class="flex items-start gap-2">
                   <span class="mt-1.5 h-1.5 w-1.5 rounded-full bg-emerald-400 shrink-0"></span>
-                  <span><span class="font-medium text-slate-100">Multi-env production deploy:</span> API on Fly.io, web on Vercel, Postgres on Neon (dev/staging/prod branches), with Sentry + Axiom + OpenTelemetry observability.</span>
+                  <span><span class="font-medium text-slate-100">Multi-env production deploy:</span> API on Fly.io, web on Vercel, Postgres on Prisma Postgres, with Sentry + Axiom + OpenTelemetry observability.</span>
                 </li>
               </ul>
               <p class="text-xs text-slate-400 mb-3">
@@ -376,7 +402,7 @@
                 </li>
               </ul>
               <p class="text-xs text-slate-400 mb-3">
-                Why it matters: it's a complete loop — database design, APIs, frontend integration, deployment,
+                Why it matters: it's a complete loop: database design, APIs, frontend integration, deployment,
                 and iteration based on actual usage.
               </p>
               <div class="flex flex-wrap gap-2 text-[11px] text-slate-300">
@@ -399,7 +425,7 @@
               </div>
               <p class="text-sm text-slate-300 mb-3">
                 A pre-prompt middleware that condenses link-bearing Markdown by resolving remote links into compact
-                cryptographic markers — cutting context token consumption and API latency for LLM workflows.
+                cryptographic markers, cutting context token consumption and API latency for LLM workflows.
                 Published on npm with zero runtime dependencies.
               </p>
               <ul class="space-y-2 text-sm text-slate-300 mb-3">
@@ -413,12 +439,12 @@
                 </li>
                 <li class="flex items-start gap-2">
                   <span class="mt-1.5 h-1.5 w-1.5 rounded-full bg-emerald-400 shrink-0"></span>
-                  <span><span class="font-medium text-slate-100">Zero-dependency architecture:</span> CLI and library built exclusively on native Node.js APIs — no third-party supply-chain risk, minimal cold-start overhead.</span>
+                  <span><span class="font-medium text-slate-100">Zero-dependency architecture:</span> CLI and library built exclusively on native Node.js APIs. No third-party supply-chain risk, minimal cold-start overhead.</span>
                 </li>
               </ul>
               <p class="text-xs text-slate-400 mb-3">
                 Why it matters: a focused, shippable tool that solves a real LLM-context problem with a craftsman's
-                restraint — do one thing well, with no dependencies you don't need.
+                restraint: do one thing well, with no dependencies you don't need.
               </p>
               <div class="flex flex-wrap items-center gap-3">
                 <a
@@ -555,7 +581,7 @@
     <footer class="border-t border-slate-800 bg-slate-950">
       <div class="max-w-5xl mx-auto px-4 py-4 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-slate-500">
         <p>&copy; <span id="year"></span> Jared Lemler. Built with care.</p>
-        <p>From electrician to backend engineer &mdash; still learning in public.</p>
+        <p>From electrician to backend engineer, still learning in public.</p>
       </div>
     </footer>
   </div>
