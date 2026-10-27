@@ -17,124 +17,175 @@
   <meta property="og:image" content="https://jaredlemler.com/og/blog.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
 
-  <script src="https://cdn.tailwindcss.com"></script>
+  <script>document.documentElement.classList.add("js");</script>
+  <link rel="stylesheet" href="/assets/css/site.css" />
 </head>
-<body class="bg-slate-950 text-slate-100 antialiased">
-  <div class="min-h-screen flex flex-col">
-    <header class="border-b border-slate-800/80 bg-slate-950/80 backdrop-blur sticky top-0 z-20">
-      <div class="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between">
-        <a href="/" class="font-semibold tracking-tight text-slate-100">
-          Jared Lemler
-        </a>
-        <nav class="hidden sm:flex gap-6 text-sm text-slate-300">
-          <a href="/#about" class="hover:text-emerald-400 transition">About</a>
-          <a href="/#projects" class="hover:text-emerald-400 transition">Projects</a>
-          <a href="/#writing" class="hover:text-emerald-400 transition">Writing</a>
-          <a href="/#contact" class="hover:text-emerald-400 transition">Contact</a>
-          <a href="/blog/" class="text-emerald-400">Blog</a>
-        </nav>
-      </div>
-    </header>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="sheet">
+    <i class="reg reg-tl" aria-hidden="true"></i>
+    <i class="reg reg-tr" aria-hidden="true"></i>
+    <i class="reg reg-bl" aria-hidden="true"></i>
+    <i class="reg reg-br" aria-hidden="true"></i>
 
-    <main class="flex-1">
-      <section class="border-b border-slate-800/80 bg-gradient-to-b from-slate-950 to-slate-900">
-        <div class="max-w-3xl mx-auto px-4 py-12 md:py-16">
-          <p class="text-xs font-mono uppercase tracking-[0.2em] text-emerald-400/80 mb-3">Blog</p>
-          <h1 class="text-3xl md:text-4xl font-semibold tracking-tight text-slate-50 mb-3">
-            Learning in public.
-          </h1>
-          <p class="text-sm md:text-base text-slate-300">
+    <!-- Masthead -->
+    <header class="masthead">
+      <a href="/" class="brand">
+        <span class="brand-dot" aria-hidden="true"></span>
+        Jared Lemler
+        <span class="brand-sheetno">SHEET 02</span>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a href="/#about">About</a>
+        <a href="/#projects">Projects</a>
+        <a href="/#writing">Writing</a>
+        <a href="/#contact">Contact</a>
+        <a href="/blog/" aria-current="page">Blog</a>
+      </nav>
+      <button id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-drawer">
+        MENU
+      </button>
+    </header>
+    <div id="nav-drawer" class="nav-drawer" hidden>
+      <nav aria-label="Mobile">
+        <a href="/#about">About</a>
+        <a href="/#projects">Projects</a>
+        <a href="/#writing">Writing</a>
+        <a href="/#contact">Contact</a>
+        <a href="/blog/">Blog</a>
+      </nav>
+    </div>
+
+    <main id="main">
+      <section class="hero">
+        <div class="wrap-narrow">
+          <p class="hero-kicker">DWG 04 · Field log</p>
+          <h1 class="hero-title">Learning in public.</h1>
+          <p class="hero-lede">
             Most of my writing lives on pckt.blog, on the AT Protocol. The latest posts are listed here and refresh weekly.
           </p>
         </div>
       </section>
 
-      <section class="bg-slate-950">
-        <div class="max-w-3xl mx-auto px-4 py-12 md:py-16">
-          <h2 class="text-sm font-medium text-slate-300 mb-3">Latest on pckt.blog</h2>
-          <div class="space-y-4">
+      <section class="section energize">
+        <div class="wrap-narrow">
+          <p class="log-label" style="margin-top: 0;">Latest on pckt.blog</p>
+          <div class="log energize-body">
             <!-- writing:start -->
-            <a href="https://jared-tries-to-blog.pckt.blog/whats-the-at-protocol-qbqh9a9" target="_blank" rel="noreferrer" class="block rounded-2xl border border-slate-800 bg-slate-900/60 px-5 py-4 hover:border-emerald-400 transition">
-              <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1 mb-1">
-                <p class="font-medium text-slate-100">What&#39;s the AT Protocol</p>
-                <time datetime="2026-09-09" class="text-xs text-slate-400 shrink-0">Sep 9, 2026</time>
+            <a href="https://jared-tries-to-blog.pckt.blog/whats-the-at-protocol-qbqh9a9" target="_blank" rel="noreferrer" class="log-row">
+              <div class="log-head">
+                <p class="log-title">What&#39;s the AT Protocol</p>
+                <time datetime="2026-09-09" class="log-date">Sep 9, 2026</time>
               </div>
-              <p class="text-sm text-slate-400">Answers to why I need a Bluesky account.</p>
+              <p class="log-desc">Answers to why I need a Bluesky account.</p>
             </a>
-            <a href="https://jared-tries-to-blog.pckt.blog/at-protocol-rss-v2-w5fq64p" target="_blank" rel="noreferrer" class="block rounded-2xl border border-slate-800 bg-slate-900/60 px-5 py-4 hover:border-emerald-400 transition">
-              <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1 mb-1">
-                <p class="font-medium text-slate-100">AT Protocol &amp; RSS v2</p>
-                <time datetime="2026-08-24" class="text-xs text-slate-400 shrink-0">Aug 24, 2026</time>
+            <a href="https://jared-tries-to-blog.pckt.blog/at-protocol-rss-v2-w5fq64p" target="_blank" rel="noreferrer" class="log-row">
+              <div class="log-head">
+                <p class="log-title">AT Protocol &amp; RSS v2</p>
+                <time datetime="2026-08-24" class="log-date">Aug 24, 2026</time>
               </div>
-              <p class="text-sm text-slate-400">A Superset, Not a Replacement</p>
+              <p class="log-desc">A Superset, Not a Replacement</p>
             </a>
-            <a href="https://jared-tries-to-blog.pckt.blog/at-protocol-rss-2n59bg2" target="_blank" rel="noreferrer" class="block rounded-2xl border border-slate-800 bg-slate-900/60 px-5 py-4 hover:border-emerald-400 transition">
-              <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1 mb-1">
-                <p class="font-medium text-slate-100">AT Protocol &amp; RSS</p>
-                <time datetime="2026-07-29" class="text-xs text-slate-400 shrink-0">Jul 29, 2026</time>
+            <a href="https://jared-tries-to-blog.pckt.blog/at-protocol-rss-2n59bg2" target="_blank" rel="noreferrer" class="log-row">
+              <div class="log-head">
+                <p class="log-title">AT Protocol &amp; RSS</p>
+                <time datetime="2026-07-29" class="log-date">Jul 29, 2026</time>
               </div>
-              <p class="text-sm text-slate-400">A Superset, Not a Replacement</p>
+              <p class="log-desc">A Superset, Not a Replacement</p>
             </a>
-            <a href="https://jared-tries-to-blog.pckt.blog/the-dreaded-what-if-pt87fky" target="_blank" rel="noreferrer" class="block rounded-2xl border border-slate-800 bg-slate-900/60 px-5 py-4 hover:border-emerald-400 transition">
-              <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1 mb-1">
-                <p class="font-medium text-slate-100">The Dreaded &quot;What if&quot;</p>
-                <time datetime="2026-07-06" class="text-xs text-slate-400 shrink-0">Jul 6, 2026</time>
+            <a href="https://jared-tries-to-blog.pckt.blog/the-dreaded-what-if-pt87fky" target="_blank" rel="noreferrer" class="log-row">
+              <div class="log-head">
+                <p class="log-title">The Dreaded &quot;What if&quot;</p>
+                <time datetime="2026-07-06" class="log-date">Jul 6, 2026</time>
               </div>
-              <p class="text-sm text-slate-400">I was looking around my socials the other night and had a thought. I couldn&#39;t quite remember when I decided I wanted to pursue software. I…</p>
+              <p class="log-desc">I was looking around my socials the other night and had a thought. I couldn&#39;t quite remember when I decided I wanted to pursue software. I…</p>
             </a>
             <!-- writing:end -->
           </div>
-          <a href="https://jared-tries-to-blog.pckt.blog/" target="_blank" rel="noreferrer" class="inline-block mt-4 text-sm text-emerald-400 hover:text-emerald-300 underline underline-offset-2">
-            All posts on pckt.blog &rarr;
-          </a>
+          <p style="margin-top: 14px;">
+            <a href="https://jared-tries-to-blog.pckt.blog/" target="_blank" rel="noreferrer" class="link">All posts on pckt.blog &rarr;</a>
+          </p>
 
-          <h2 class="text-sm font-medium text-slate-300 mt-12 mb-3">On this site</h2>
-          <div class="space-y-4">
+          <p class="log-label">On this site</p>
+          <div class="log">
             <a
               href="/blog/in-person-events/"
-              class="block rounded-2xl border border-slate-800 bg-slate-900/60 px-5 py-4 hover:border-emerald-400 transition"
+              class="log-row"
             >
-              <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1 mb-1">
-                <p class="font-medium text-slate-100">
-                  The Value of In-Person Events
-                </p>
-                <time datetime="2025-09-22" class="text-xs text-slate-400 shrink-0">Sep 22, 2025</time>
+              <div class="log-head">
+                <p class="log-title">The Value of In-Person Events</p>
+                <time datetime="2025-09-22" class="log-date">Sep 22, 2025</time>
               </div>
-              <p class="text-sm text-slate-400">
-                Why getting in the room beats watching the stream: lessons from CascadiaJS.
-              </p>
+              <p class="log-desc">Why getting in the room beats watching the stream: lessons from CascadiaJS.</p>
             </a>
           </div>
 
-          <h2 class="text-sm font-medium text-slate-300 mt-12 mb-3">Earlier writing</h2>
-          <ul class="space-y-2 text-sm">
-            <li class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
-              <a href="https://medium.com/@jaredtlemler/from-electrical-work-to-software-development-embracing-public-learning-in-my-career-change-659b125681ff" target="_blank" rel="noreferrer" class="text-slate-300 hover:text-emerald-400 underline underline-offset-2 decoration-slate-700">
-                From Electrical Work to Software Development: Embracing Public Learning
-              </a>
-              <time datetime="2025-05-27" class="text-xs text-slate-400">Medium · May 27, 2025</time>
+          <p class="log-label">Earlier writing</p>
+          <ul class="log-earlier">
+            <li>
+              <a href="https://medium.com/@jaredtlemler/from-electrical-work-to-software-development-embracing-public-learning-in-my-career-change-659b125681ff" target="_blank" rel="noreferrer">From Electrical Work to Software Development: Embracing Public Learning</a>
+              <time datetime="2025-05-27">Medium · May 27, 2025</time>
             </li>
-            <li class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
-              <a href="https://medium.com/@jaredtlemler/my-docker-learning-journey-struggles-headaches-and-small-wins-f262add51ae2" target="_blank" rel="noreferrer" class="text-slate-300 hover:text-emerald-400 underline underline-offset-2 decoration-slate-700">
-                My Docker Learning Journey: Struggles, Headaches, and Small Wins
-              </a>
-              <time datetime="2025-05-31" class="text-xs text-slate-400">Medium · May 31, 2025</time>
+            <li>
+              <a href="https://medium.com/@jaredtlemler/my-docker-learning-journey-struggles-headaches-and-small-wins-f262add51ae2" target="_blank" rel="noreferrer">My Docker Learning Journey: Struggles, Headaches, and Small Wins</a>
+              <time datetime="2025-05-31">Medium · May 31, 2025</time>
             </li>
           </ul>
         </div>
       </section>
     </main>
 
-    <footer class="border-t border-slate-800 bg-slate-950">
-      <div class="max-w-5xl mx-auto px-4 py-4 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-slate-500">
-        <p>&copy; <span id="year"></span> Jared Lemler. Built with care.</p>
-        <a href="/" class="hover:text-emerald-400 transition">&larr; Back to home</a>
+    <!-- Title block -->
+    <footer class="titleblock">
+      <div class="tb-grid">
+        <div class="tb-cell"><span class="tb-label">Drawn by</span><span class="tb-val">Jared Lemler</span></div>
+        <div class="tb-cell"><span class="tb-label">Project</span><span class="tb-val">Personal site & resume</span></div>
+        <div class="tb-cell"><span class="tb-label">Sheet</span><span class="tb-val">02 of 03</span></div>
+        <div class="tb-cell"><span class="tb-label">Rev</span><span class="tb-val">C</span></div>
+        <div class="tb-cell"><span class="tb-label">Date</span><span class="tb-val">2026-10-27</span></div>
+        <div class="tb-cell"><span class="tb-label">Scale</span><span class="tb-val">NTS</span></div>
+      </div>
+      <div class="tb-foot">
+        <p>&copy; <span id="year">2026</span> Jared Lemler · Still learning in public</p>
+        <p><a href="/">&larr; Back to sheet 01</a></p>
       </div>
     </footer>
   </div>
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
+
+    const navToggle = document.getElementById("nav-toggle");
+    const navDrawer = document.getElementById("nav-drawer");
+    navToggle.addEventListener("click", () => {
+      const open = navDrawer.hasAttribute("hidden");
+      if (open) navDrawer.removeAttribute("hidden");
+      else navDrawer.setAttribute("hidden", "");
+      navToggle.setAttribute("aria-expanded", String(open));
+    });
+    navDrawer.querySelectorAll("a").forEach((a) =>
+      a.addEventListener("click", () => {
+        navDrawer.setAttribute("hidden", "");
+        navToggle.setAttribute("aria-expanded", "false");
+      })
+    );
+
+    if ("IntersectionObserver" in window) {
+      const io = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("energized");
+              io.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.12 }
+      );
+      document.querySelectorAll(".energize").forEach((s) => io.observe(s));
+    } else {
+      document.querySelectorAll(".energize").forEach((s) => s.classList.add("energized"));
+    }
   </script>
 </body>
 </html>

@@ -1,63 +1,50 @@
 JARED LEMLER
-Backend Engineer • Pacifica, CA (SF Bay Area) • jared@jaredlemler.com • github.com/JL037 • linkedin.com/in/jaredlemler • bsky.app/profile/jaredlemler.com
+Software Engineer • Pacifica, CA (SF Bay Area) • jared@jaredlemler.com • jaredlemler.com • github.com/JL037 • linkedin.com/in/jaredlemler
 
 SUMMARY
-Backend Engineer building high-throughput, low-latency systems in Python/FastAPI and TypeScript/Fastify. Cut production DB operations on a live data pipeline 96%, from ~209K to ~3K to 8K per day. Driving development velocity through agentic workflows that optimize sprint planning, context harnessing, and automated testing. Brings 8 years of industrial electrical infrastructure experience into software engineering: a fail-safe mindset and rigorous systems thinking carried over from zero-tolerance-failure environments into resilient API and pipeline design.
+Software engineer who builds and runs production systems end to end, along with the tools that keep them healthy. Built and run VoxPort, a live federated podcast platform with LLM-driven incident response, and nfl-dagster, a Dagster + Snowflake + dbt pipeline with an LLM question tool that only states numbers it got from a query. Eight years as a journeyman electrician troubleshooting live systems built the habit of finding the cause, fixing it, and shipping the fix.
 
-PROFESSIONAL EXPERIENCE
+EXPERIENCE
 
-VoxPort (voxport.live): Federated Podcast Platform                Oct 2025 – Present
-Founder & Lead Engineer | Remote
-Technologies: Fastify, Next.js, ATProto, Prisma Postgres, Cloudflare R2, Fly.io, Vercel
-- Shipped a federated podcast platform: Built end-to-end on the Bluesky ATProto ecosystem (creator studio, public listener pages, OAuth identity, R2 media pipeline, and Fly.io/Vercel deployment), serving live creators and listeners.
-- Built a firehose ingestion pipeline: Filtered a 2,000+ events/sec Bluesky firehose to relevant-only events by configuring server-side collection filtering, dropping roughly 96% at the source across 7 collection types.
-- Database Operations Optimization: Cut production DB operations 96%, from ~209K to ~3K to 8K per day, by adding in-memory caching, extending cursor flush intervals, and batching transaction writes, eliminating ~60k table scans/day. Used an LLM agent to audit Axiom logs to identify and remediate unoptimized queries, further improving performance.
-- Resolved an OAuth outage: Restored PDS sign-in from complete failure by routing client-metadata.json through Cloudflare proxying, isolating Vercel IP routing as root cause via cross-network probes.
-- Hardened RSS import pipeline: Secured our RSS import pipeline against SSRF and file-upload attacks by implementing magic-number validation, ffmpeg metadata stripping, and RFC-1918 blocking.
-- Eliminated external DAW dependency: Built a browser-native recording booth with off-main-thread MP3 encoding and IndexedDB crash recovery, enabling non-destructive episode editing entirely in-browser.
-- Accelerated development velocity: Integrated context harnessing and agentic onboarding workflows using open-weights models to automate sprint planning, issue tracking (via MCP/Linear/Notion), and test generation, significantly reducing manual overhead.
+VoxPort (voxport.live): Founder & Lead Engineer                Oct 2025 – Present
+Technologies: TypeScript, Fastify, Next.js, Prisma Postgres, AT Protocol, Cloudflare R2, Fly.io, Vercel, Axiom
+- Built and operate a production platform end to end, solo: creator studio, public listener pages, Bluesky OAuth identity, R2 media pipeline, browser-native recording booth (off-main-thread MP3 encoding, IndexedDB crash recovery), and Fly.io/Vercel deploys. Serves 13 creators and 489 published episodes, with ~12K RSS feed pulls/month from Spotify, Apple, and Pocket Casts.
+- Used an LLM agent to investigate production incidents: ran it over Axiom logs and Postgres stats (pg_stat_statements, pg_stat_user_tables) to produce a root-cause audit of runaway database spend. It traced the cost to a firehose reconnect storm (~820 reconnects/day), one cursor row taking ~5k writes/day, and scheduled jobs re-running on every restart.
+- Cut production DB operations 96% (~209k to ~3-8k/day) based on that audit by adding an in-memory creator-ID cache, lengthening the cursor flush interval, and batching writes into transactions, which removed ~60k table scans/day.
+- Built an event-driven ingestion service on a 2,000+ events/sec Bluesky firehose. Server-side filtering across 7 collection types drops ~96% of events before they reach application code or the database.
+- Resolved an OAuth sign-in outage: isolated Vercel IP routing as the root cause with cross-network probes, then routed client metadata through a Cloudflare proxy, restoring PDS sign-in from complete failure.
+- Automated incident response with an AI Slack bot: a TypeScript service on GitHub Actions checks Axiom health metrics hourly and posts a Claude-written incident summary to Slack. A stall check catches silent failures that never log an error.
+- Automated sprint planning, issue tracking, and test generation by connecting agents to Linear and Notion over MCP, using open-weights models.
+- Hardened untrusted input paths: protected RSS import against SSRF and malicious uploads with RFC-1918 blocking, magic-number validation, and ffmpeg metadata stripping.
 
-Backend Engineer (Contract), Talk                              Jan 2025 – Feb 2026
-Social Connection Platform • Remote • Held alongside electrical work
-Technologies: Python, FastAPI, TypeScript, React, Tailwind CSS, Vite, Cloudflare, Plausible Analytics
-- Reduced manual reporting effort by 90%: Created automated data processing pipelines and visual analytics dashboards converting raw event metrics into business insights.
-- Served 200+ active university students: Developed and deployed a privacy-compliant web platform using React, Vite, Tailwind CSS, and a custom FastAPI backend infrastructure.
-- Accelerated time-to-market: Translated founder vision into production-ready software by rapidly converting interactive prototypes (Lovable) into full-stack solutions.
-- Increased user engagement: Designed a custom QR-code trigger bridging physical events with digital experiences alongside optimized user onboarding workflows.
+Backend Engineer (Contract), Talk (Social Connection Platform)  Jan 2025 – Feb 2026
+Technologies: TypeScript, React, Vite, Tailwind CSS, Python, FastAPI, Cloudflare, Plausible Analytics
+- Built internal analytics dashboards and automated reporting pipelines that turn raw event metrics into business insights, cutting manual reporting effort ~90%.
+- Shipped a privacy-compliant web platform (React/Vite/Tailwind, FastAPI backend) serving 200+ active university students.
+- Moved fast with the founder: turned Lovable prototypes into production features, like a QR-code trigger linking live events to onboarding.
 
-Journeyman Electrician, Gaylor Electric • Wolverine Electric • IBEW  2017 – 2025
-Indiana & Michigan
-- Led crews of 2–4 electricians on high-visibility commercial jobsites, reading complex architectural blueprints to deliver projects on schedule and to strict code standards.
-- Built and inspected critical electrical infrastructure under zero-tolerance failure environments, developing deep live-system troubleshooting capabilities.
-- Earned official Journeyman status through Associated Builders and Contractors (ABC); active dues-paying IBEW union member.
+Journeyman Electrician | Gaylor Electric • Wolverine Electric • IBEW   2017 – 2025
+- Led crews of 2-4 electricians on commercial jobsites, building and inspecting critical infrastructure to blueprint, schedule, and strict code where failure is not an option. Journeyman through ABC Indiana; IBEW member.
 
-FEATURED PROJECTS
+FEATURED PROJECT
 
-doc-lok (github.com/JL037/doc-lok): Pre-Prompt Context Condenser
-TypeScript, Node.js, Zero-Dep
-- Optimized LLM context windows: Authored a TypeScript middleware library resolving remote Markdown links into compact cryptographic markers to cut token consumption and latency. Published on npm.
-- Bypassed redundant downloads: Constructed a two-phase verification engine using HTTP HEAD probes and ETag validation to cache remote docs efficiently.
-- Eliminated third-party vulnerabilities: Developed a lightweight CLI tool and npm library relying strictly on native Node.js APIs.
+nfl-dagster | NFL Contract Value Pipeline & Ask Tool (github.com/JL037/nfl-dagster • live demo)
+Technologies: Python, Dagster+ Serverless, Snowflake, dbt, Postgres, FastAPI, HTMX, Claude API, GitHub Actions, Railway
+- Built a production ELT pipeline: Dagster orchestrates nflverse play-by-play, schedules, and OverTheCap contract data (2015 to present) into Snowflake RAW, STAGING, and MARTS layers via dbt; 20 assets with season partitions, refreshed on schedule by Dagster+ Serverless with no dependency on a local machine.
+- Stopped bad data before publish: Each load deletes, copies, and audits inside one Snowflake transaction and rolls back on failure. Wrote a public postmortem on a race between blocking checks and downstream automation, and fixed it by validating before commit.
+- Shipped a serving layer: An audited Dagster asset publishes finished marts to Postgres in a single-transaction swap, verified against Snowflake by row counts and primary-key fingerprints, so the website never queries the warehouse.
+- Modeled spend vs. performance: QB cap share against EPA per dropback, with "worth it" defined as EPA above a fitted value line; documented edge cases (mid-season trades, missing cap rows) as tested decisions, 43/43 dbt tests passing in prod.
+- Grounded LLM question answering: A Claude Haiku tool loop over select-only, parameterized, read-only queries with timeouts and row caps; code rejects any number not returned by a query, and out-of-scope questions get a "no data" reply. 81-question eval suite scores 78/81 (30/30 refusals) at ~$0.0005 and 4 s per question; chose the model over GLM-5.3 Flash on eval accuracy, cost, and latency.
+- Ran it like production: Live public deploy with rate limits, spend caps, and no stored user data; required CI checks (pytest with mutation-checked tests, dbt parse, gitleaks full-history secret scan); Snowflake key-pair auth, least-privilege role, and a 10-credit monthly resource monitor.
 
-Travel Wishlist (travelwishlist.app): Location-Based Travel Planner
-FastAPI, React, Docker, Postgres
-- Delivered ~100ms response times: Built a city-based weather lookup system integrating external weather APIs with interactive mapping layers using FastAPI, PostgreSQL, and Docker.
-- Full-Stack Architecture: Engineered JWT authentication workflows, Pydantic data validation schemas, and agenda calendar itinerary views.
+ADDITIONAL PROJECTS
+- doc-lok (github.com/JL037/doc-lok, on npm): agents kept spending tokens re-reading the same remote docs, so I wrote a zero-dependency TypeScript library and CLI that condenses Markdown links into compact markers and uses a two-phase HTTP HEAD/ETag cache to skip redundant downloads.
+- atproto-pro (skills.sh): a published AT Protocol skill that gives AI coding agents working knowledge of the protocol. I also write about building on ATProto and RSS on pckt.blog.
 
-seamux (github.com/thecodedrift/seamux): Open Source Contributor
-Open-source, multi-agent session dashboard for Claude Code and Codex in cmux
-- Scoped OpenCode support: Proposed OpenCode as a supported engine (issue #4) and, at the maintainer's request, split unhooked terminal sessions into issue #5.
-- Measured the integration first: Opened PR #8 (in review), documenting how cmux registers and tracks OpenCode sessions and what the engine needs to drive them reliably.
-
-SKILLS & TECHNICAL COMPETENCIES
-Languages & Core DBs: Python, JavaScript, TypeScript, SQL | PostgreSQL, Prisma Postgres, Neon, Alembic, Schema Data Modeling, Index Optimization
-Frameworks & Infra: FastAPI, Fastify, Next.js, Node.js, SQLAlchemy 2.0, Pydantic, Django, React, Prisma ORM | AWS (EC2, Elastic Beanstalk, S3), Cloudflare R2, Fly.io, Hetzner
-DevOps & Concepts: Docker, Git, GitHub, JWT, pytest, Sentry, OpenTelemetry, Axiom | Pandas, ETL Pipelines, Batch Processing | REST API Design, Distributed Systems, AT Protocol, WebSockets
-AI Engineering: Agentic Workflows, Context Harnessing, Open-Weights Model Integration, Prompt Engineering, Test Harness Development
-
-EDUCATION & CERTIFICATIONS
-- Journeyman Electrician: Associated Builders and Contractors (ABC) Indiana • Completed multi-year vocational trade training combining technical classroom instruction with on-the-job industrial experience. Active dues-paying IBEW member.
-- Independent Study: Ongoing practical study of Python, FastAPI, Fastify, Next.js, TypeScript, PostgreSQL, distributed systems, and the AT Protocol. Backed by 1:1 mentorship from senior engineers (former Facebook, Microsoft, and Prisma engineers).
-
-WRITING & COMMUNITY
-Published an AT Protocol developer skill ("atproto-pro") on https://www.skills.sh/jl037/atproto-pro/atproto-pro; written on https://pckt.blog/b/jared-tries-to-blog about building on the AT Protocol and RSS feed integration.
+SKILLS & TRAINING
+Languages: TypeScript, JavaScript, SQL, Python
+AI & Automation: LLM APIs (Claude), AI agents, LLM evals, Slack API bots, MCP integrations (Linear, Notion), AI coding tools (Claude Code, Devin CLI, OpenCode, Zed), context engineering, open-weights models
+Data Engineering: Dagster (Dagster+ Serverless, partitions, asset checks, automation), Snowflake, dbt, write-audit-publish, ELT
+Backend & Data: Node.js, Fastify, Next.js, React, FastAPI, Prisma, PostgreSQL (query and index tuning, pg_stat analysis), REST, WebSockets
+Infra & Ops: Docker, Fly.io, Vercel, Railway, Cloudflare (R2, proxy), AWS (EC2, S3), Git/GitHub Actions, gitleaks, Axiom, Sentry, OpenTelemetry
+Training: Self-taught software engineer with 1:1 mentorship from senior engineers (formerly at Facebook, Microsoft, and Prisma).

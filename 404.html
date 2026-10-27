@@ -7,49 +7,42 @@
   <meta name="description" content="The page you're looking for doesn't exist." />
 
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-
-  <style>
-    body {
-      margin: 0;
-      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
-      background-color: #0d1117;
-      color: #c9d1d9;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-    }
-    .container {
-      text-align: center;
-      padding: 40px 20px;
-      max-width: 600px;
-    }
-    h1 {
-      font-size: 4rem;
-      color: #58a6ff;
-      margin: 0 0 10px;
-    }
-    p {
-      color: #8b949e;
-      font-size: 1.1rem;
-      margin-bottom: 24px;
-    }
-    a {
-      color: #58a6ff;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    a:hover {
-      color: #7ee787;
-      text-decoration: underline;
-    }
-  </style>
+  <link rel="stylesheet" href="/assets/css/site.css" />
 </head>
 <body>
-  <div class="container">
-    <h1>404</h1>
-    <p>The page you're looking for doesn't exist.</p>
-    <a href="/">Back to Home</a>
+  <div class="sheet tripped-wrap">
+    <i class="reg reg-tl" aria-hidden="true"></i>
+    <i class="reg reg-tr" aria-hidden="true"></i>
+    <i class="reg reg-bl" aria-hidden="true"></i>
+    <i class="reg reg-br" aria-hidden="true"></i>
+
+    <main class="tripped">
+      <!-- Tripped breaker -->
+      <svg viewBox="0 0 120 150" aria-hidden="true">
+        <rect x="35" y="8" width="50" height="112" rx="6" fill="none" stroke="rgba(219,236,255,0.5)" stroke-width="1.5" />
+        <line x1="60" y1="30" x2="60" y2="98" stroke="rgba(219,236,255,0.24)" stroke-width="1" stroke-dasharray="3 4" />
+        <circle cx="60" cy="64" r="7" fill="#0e2a47" stroke="rgba(233,242,250,0.9)" stroke-width="1.5" />
+        <line x1="60" y1="64" x2="82" y2="34" stroke="#ffb454" stroke-width="3" stroke-linecap="round" />
+        <circle cx="82" cy="34" r="4" fill="#ffb454" />
+        <text x="60" y="140" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="11" letter-spacing="3" fill="#ffb454">TRIPPED</text>
+      </svg>
+
+      <p class="tripped-code">Fault code: 404 · Circuit not found</p>
+      <h1>Breaker tripped.</h1>
+      <p>The page you're looking for doesn't exist. It may have been moved, decommissioned, or never wired up in the first place.</p>
+      <a href="/" class="btn btn-primary">Reset &rarr; Back home</a>
+    </main>
+
+    <footer class="titleblock">
+      <div class="tb-grid">
+        <div class="tb-cell"><span class="tb-label">Drawn by</span><span class="tb-val">Jared Lemler</span></div>
+        <div class="tb-cell"><span class="tb-label">Project</span><span class="tb-val">Personal site & resume</span></div>
+        <div class="tb-cell"><span class="tb-label">Sheet</span><span class="tb-val">N/A</span></div>
+        <div class="tb-cell"><span class="tb-label">Rev</span><span class="tb-val">C</span></div>
+        <div class="tb-cell"><span class="tb-label">Date</span><span class="tb-val">2026-10-27</span></div>
+        <div class="tb-cell"><span class="tb-label">Scale</span><span class="tb-val">NTS</span></div>
+      </div>
+    </footer>
   </div>
 </body>
 </html>

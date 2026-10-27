@@ -25,8 +25,8 @@ const START = "<!-- writing:start -->";
 const END = "<!-- writing:end -->";
 
 const TARGETS = [
-  { file: "index.html", url: "https://jaredlemler.com/", render: renderHomeItem, indent: "            " },
-  { file: "blog/index.html", url: "https://jaredlemler.com/blog/", render: renderBlogItem, indent: "            " },
+  { file: "index.html", url: "https://jaredlemler.com/", render: renderItem, indent: "            " },
+  { file: "blog/index.html", url: "https://jaredlemler.com/blog/", render: renderItem, indent: "            " },
 ];
 
 async function getJson(url, attempts = 3) {
@@ -123,22 +123,12 @@ function summarize(text, max = 140) {
   return `${clean.slice(0, clean.lastIndexOf(" ", max)).replace(/[,.;:]$/, "")}…`;
 }
 
-function renderHomeItem(p) {
-  const desc = p.description ? `\n  <p class="text-xs text-slate-400 mt-1">${escapeHtml(summarize(p.description))}</p>` : "";
-  return `<a href="${escapeHtml(p.url)}" target="_blank" rel="noreferrer" class="block rounded-2xl border border-slate-800 bg-slate-900/60 px-4 py-3 hover:border-emerald-400 transition">
-  <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
-    <p class="font-medium text-slate-100">${escapeHtml(p.title)}</p>
-    <time datetime="${isoDate(p.published)}" class="text-xs text-slate-400 shrink-0">${displayDate(p.published)}</time>
-  </div>${desc}
-</a>`;
-}
-
-function renderBlogItem(p) {
-  const desc = p.description ? `\n  <p class="text-sm text-slate-400">${escapeHtml(summarize(p.description))}</p>` : "";
-  return `<a href="${escapeHtml(p.url)}" target="_blank" rel="noreferrer" class="block rounded-2xl border border-slate-800 bg-slate-900/60 px-5 py-4 hover:border-emerald-400 transition">
-  <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1 mb-1">
-    <p class="font-medium text-slate-100">${escapeHtml(p.title)}</p>
-    <time datetime="${isoDate(p.published)}" class="text-xs text-slate-400 shrink-0">${displayDate(p.published)}</time>
+function renderItem(p) {
+  const desc = p.description ? `\n  <p class="log-desc">${escapeHtml(summarize(p.description))}</p>` : "";
+  return `<a href="${escapeHtml(p.url)}" target="_blank" rel="noreferrer" class="log-row">
+  <div class="log-head">
+    <p class="log-title">${escapeHtml(p.title)}</p>
+    <time datetime="${isoDate(p.published)}" class="log-date">${displayDate(p.published)}</time>
   </div>${desc}
 </a>`;
 }
